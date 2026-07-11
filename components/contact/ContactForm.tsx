@@ -48,8 +48,8 @@ export default function ContactForm() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Our Location</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Mayurbhanj, Odisha, India
-                    Jamshedpur, Jharkhand, India
+                    11th Floor, Techno Hub, Near VR Mall,<br />
+                    Surat, Gujarat - 395007, India
                   </p>
                 </div>
               </motion.div>
@@ -88,10 +88,10 @@ export default function ContactForm() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Email Address</h3>
                   <p className="text-slate-600 text-sm">
-                    <a href="mailto:hello@bkpdevelopers.com" className="hover:text-primary-600 transition-colors">inboxtobibek@gmail.com</a>
+                    <a href="mailto:hello@bkpdevelopers.com" className="hover:text-primary-600 transition-colors">hello@bkpdevelopers.com</a>
                   </p>
                   <p className="text-slate-600 text-sm">
-                    <a href="mailto:support@bkpdevelopers.com" className="hover:text-primary-600 transition-colors">inboxtobibek@gmail.com</a>
+                    <a href="mailto:support@bkpdevelopers.com" className="hover:text-primary-600 transition-colors">support@bkpdevelopers.com</a>
                   </p>
                 </div>
               </motion.div>
