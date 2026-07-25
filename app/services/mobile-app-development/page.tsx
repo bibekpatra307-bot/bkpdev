@@ -23,7 +23,7 @@ export default function MobileAppDevelopment() {
           'App Testing & Quality Assurance',
           'App Store & Play Store Deployment'
         ]}
-        image="https://picsum.photos/seed/mobileapp/800/600"
+        image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
       />
       <CTA />
     </>

@@ -23,7 +23,7 @@ export default function WebsiteDevelopment() {
           'Performance Optimization & Security',
           'Ongoing Maintenance & Support'
         ]}
-        image="https://picsum.photos/seed/webdev/800/600"
+        image="https://images.unsplash.com/photo-1504384545592-4d5ce2da580a?w=800&q=80"
       />
       <CTA />
     </>

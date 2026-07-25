@@ -4,6 +4,7 @@ import './globals.css';
 import { constructMetadata } from '@/lib/seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Chatbot from '@/components/layout/Chatbot';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,8 +33,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Chatbot />
       </body>
     </html>
   );
 }
-

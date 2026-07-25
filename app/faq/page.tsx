@@ -38,12 +38,12 @@ export default function FAQPage() {
         badge="FAQS" 
         description="Find answers to common questions about our services, processes, and more."
       />
-      <section className="py-24 bg-white relative -mt-10">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-24 bg-white relative -mt-10">
+        <div className="max-w-3xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-6 md:p-8 border border-slate-100 shadow-sm">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{faq.question}</h3>
+              <div key={index} className="bg-slate-50 rounded-2xl p-3 md:p-6 md:p-8 border border-slate-100 shadow-sm">
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">{faq.question}</h3>
                 <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>
             ))}

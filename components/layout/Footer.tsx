@@ -25,23 +25,23 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0a0f1c] text-slate-300 pt-20 pb-10 border-t border-slate-800 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+    <footer className="bg-[#0a0f1c] text-slate-300 pt-10 md:pt-20 pb-5 md:pb-10 border-t border-slate-800 relative">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 lg:gap-8 mb-8 md:mb-16">
           
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-               <div className="text-2xl font-heading font-bold tracking-tight flex items-center">
+               <div className="text-xl md:text-2xl font-heading font-bold tracking-tight flex items-center">
                  <span className="text-primary-500">BKP</span>
-                 <span className="text-white ml-1 text-lg">Developers</span>
+                 <span className="text-white ml-1 text-base md:text-lg">Developers</span>
                </div>
-               <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Innovate. Develop. Deliver.</p>
+               <p className="text-[10px] md:text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Innovate. Develop. Deliver.</p>
             </Link>
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
               BKP Developers is a leading software development company delivering innovative, reliable and high-quality digital solutions.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-2 md:gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
                 <Facebook className="w-4 h-4" />
               </a>
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-3 md:mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Home', path: '/' },
@@ -72,7 +72,7 @@ export default function Footer() {
                 { name: 'Career', path: '/career' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
+                  <Link href={link.path} className="text-xs md:text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
                     {link.name}
                   </Link>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Services</h3>
+            <h3 className="text-white font-semibold mb-3 md:mb-6">Services</h3>
             <ul className="space-y-3">
               {[
                 { name: 'Website Development', path: '/services/website-development' },
@@ -95,7 +95,7 @@ export default function Footer() {
                 { name: 'Maintenance & Support', path: '/services/maintenance-support' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
+                  <Link href={link.path} className="text-xs md:text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
                     {link.name}
                   </Link>
@@ -106,30 +106,30 @@ export default function Footer() {
 
           {/* Contact Us */}
           <div>
-            <h3 className="text-white font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-white font-semibold mb-3 md:mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+911234567890" className="text-sm text-slate-400 hover:text-white transition-colors block">+91 12345 67890</a>
+                  <a href="tel:+911234567890" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">+91 12345 67890</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <a href="mailto:hello@bkpdevelopers.com" className="text-sm text-slate-400 hover:text-white transition-colors block">hello@bkpdevelopers.com</a>
+                  <a href="mailto:hello@bkpdevelopers.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">hello@bkpdevelopers.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm text-slate-400">11th Floor, Techno Hub, Near VR Mall, Surat, Gujarat - 395007, India</p>
+                  <p className="text-xs md:text-sm text-slate-400">11th Floor, Techno Hub, Near VR Mall, Surat, Gujarat - 395007, India</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-sm text-slate-400">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                  <p className="text-xs md:text-sm text-slate-400">Mon - Sat: 10:00 AM - 7:00 PM</p>
                 </div>
               </li>
             </ul>
@@ -138,15 +138,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+        <div className="pt-4 md:pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm text-slate-400">
             <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
             <span className="text-slate-700">|</span>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
             <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
           </div>
-          <p className="text-sm text-slate-500">
+          <p className="text-xs md:text-sm text-slate-500">
             © {new Date().getFullYear()} BKP Developers. All Rights Reserved.
           </p>
         </div>

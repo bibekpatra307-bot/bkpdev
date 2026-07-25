@@ -9,33 +9,33 @@ const projects = [
   {
     title: 'LearnHub',
     category: 'E-learning Platform',
-    image: 'https://picsum.photos/seed/learnhub/600/400',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
     path: '/portfolio',
   },
   {
     title: 'FoodieX',
     category: 'Food Delivery App',
-    image: 'https://picsum.photos/seed/foodiex/600/400',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
     path: '/portfolio',
   },
   {
     title: 'DreamHome',
     category: 'Real Estate Website',
-    image: 'https://picsum.photos/seed/dreamhome/600/400',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
     path: '/portfolio',
   },
 ];
 
 export default function Projects() {
   return (
-    <section className="py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-24 bg-white relative">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 md:gap-6 mb-6 md:mb-12">
           <div>
-            <p className="text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">Our Work</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900">
+            <p className="text-xs md:text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">Our Work</p>
+            <h2 className="text-2xl md:text-3xl md:text-4xl font-heading font-bold text-slate-900">
               Featured Projects
             </h2>
           </div>
@@ -49,7 +49,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -60,8 +60,8 @@ export default function Projects() {
               className="group"
             >
               <Link href={project.path} className="block">
-                <div className="relative rounded-2xl overflow-hidden mb-6 aspect-[4/3] bg-slate-100">
-                  <Image
+                <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-6 aspect-[4/3] bg-slate-100">
+                  <Image referrerPolicy="no-referrer"
                     src={project.image}
                     alt={project.title}
                     fill
@@ -72,13 +72,13 @@ export default function Projects() {
                   <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/20 transition-colors duration-300"></div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-slate-500 mb-4">
+                <p className="text-slate-500 mb-2 md:mb-4">
                   {project.category}
                 </p>
-                <div className="flex items-center text-primary-600 font-medium text-sm">
+                <div className="flex items-center text-primary-600 font-medium text-xs md:text-sm">
                   View Project
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>

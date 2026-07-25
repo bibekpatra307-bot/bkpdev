@@ -12,7 +12,7 @@ export default function ServicesPage() {
   return (
     <>
       <ServicesHero />
-      <div className="pt-10">
+      <div className="pt-5 md:pt-10">
         <ServicesList />
       </div>
       <CTA />

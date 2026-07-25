@@ -8,12 +8,12 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 const categories = ['All', 'Web Development', 'Mobile App', 'UI/UX Design', 'E-commerce'];
 
 const projects = [
-  { id: 1, title: 'LearnHub', category: 'Web Development', image: 'https://picsum.photos/seed/learnhub/800/600', description: 'A comprehensive e-learning platform.' },
-  { id: 2, title: 'FoodieX', category: 'Mobile App', image: 'https://picsum.photos/seed/foodiex/800/600', description: 'Fast and reliable food delivery application.' },
-  { id: 3, title: 'DreamHome', category: 'Web Development', image: 'https://picsum.photos/seed/dreamhome/800/600', description: 'Modern real estate listing website.' },
-  { id: 4, title: 'FinDash', category: 'UI/UX Design', image: 'https://picsum.photos/seed/findash/800/600', description: 'Financial dashboard and analytics interface.' },
-  { id: 5, title: 'ShopEase', category: 'E-commerce', image: 'https://picsum.photos/seed/shopease/800/600', description: 'Scalable e-commerce solution for retail.' },
-  { id: 6, title: 'HealthConnect', category: 'Mobile App', image: 'https://picsum.photos/seed/healthconnect/800/600', description: 'Telemedicine and patient care mobile app.' },
+  { id: 1, title: 'LearnHub', category: 'Web Development', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80', description: 'A comprehensive e-learning platform.' },
+  { id: 2, title: 'FoodieX', category: 'Mobile App', image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80', description: 'Fast and reliable food delivery application.' },
+  { id: 3, title: 'DreamHome', category: 'Web Development', image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80', description: 'Modern real estate listing website.' },
+  { id: 4, title: 'FinDash', category: 'UI/UX Design', image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80', description: 'Financial dashboard and analytics interface.' },
+  { id: 5, title: 'ShopEase', category: 'E-commerce', image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80', description: 'Scalable e-commerce solution for retail.' },
+  { id: 6, title: 'HealthConnect', category: 'Mobile App', image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80', description: 'Telemedicine and patient care mobile app.' },
 ];
 
 export default function PortfolioList() {
@@ -24,16 +24,16 @@ export default function PortfolioList() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section className="py-24 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-24 bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-16">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-3 md:px-6 py-2.5 rounded-full text-xs md:text-sm font-medium transition-all duration-300 ${
                 activeCategory === category
                   ? 'bg-primary-600 text-white shadow-md shadow-primary-600/30'
                   : 'bg-slate-50 text-slate-600 hover:bg-primary-50 hover:text-primary-600'
@@ -45,7 +45,7 @@ export default function PortfolioList() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
@@ -58,7 +58,7 @@ export default function PortfolioList() {
                 className="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-100"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
+                  <Image referrerPolicy="no-referrer"
                     src={project.image}
                     alt={project.title}
                     fill
@@ -76,17 +76,17 @@ export default function PortfolioList() {
                   </div>
                 </div>
                 
-                <div className="p-6 relative bg-white transform transition-transform duration-300 group-hover:-translate-y-2">
-                  <span className="text-primary-600 text-xs font-bold uppercase tracking-wider mb-2 block">
+                <div className="p-3 md:p-6 relative bg-white transform transition-transform duration-300 group-hover:-translate-y-2">
+                  <span className="text-primary-600 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2 block">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-slate-500 text-sm mb-4 line-clamp-2">
+                  <p className="text-slate-500 text-xs md:text-sm mb-2 md:mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  <div className="flex items-center text-sm font-medium text-slate-900 group-hover:text-primary-600 transition-colors cursor-pointer">
+                  <div className="flex items-center text-xs md:text-sm font-medium text-slate-900 group-hover:text-primary-600 transition-colors cursor-pointer">
                     View Case Study
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>

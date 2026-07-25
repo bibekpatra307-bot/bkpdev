@@ -57,10 +57,10 @@ const plans = [
 
 export default function PricingCards() {
   return (
-    <section className="py-24 bg-white relative -mt-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-24 bg-white relative -mt-10">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-4 md:gap-8">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -68,7 +68,7 @@ export default function PricingCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-3xl p-8 lg:p-10 border ${
+              className={`relative rounded-3xl p-4 md:p-8 lg:p-10 border ${
                 plan.popular 
                   ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-primary-900/20 transform lg:-translate-y-4' 
                   : 'bg-white border-slate-200 shadow-lg'
@@ -76,32 +76,32 @@ export default function PricingCards() {
             >
               {plan.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <span className="bg-primary-600 text-white text-xs font-bold uppercase tracking-wider py-1.5 px-4 rounded-full shadow-lg shadow-primary-600/30">
+                  <span className="bg-primary-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1.5 px-2 md:px-4 rounded-full shadow-lg shadow-primary-600/30">
                     Most Popular
                   </span>
                 </div>
               )}
 
-              <div className="text-center mb-8">
-                <h3 className={`text-xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
+              <div className="text-center mb-4 md:mb-8">
+                <h3 className={`text-lg md:text-xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
                   {plan.name}
                 </h3>
-                <p className={`text-sm mb-6 ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
+                <p className={`text-xs md:text-sm mb-3 md:mb-6 ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
                   {plan.description}
                 </p>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className={`text-5xl font-bold font-heading ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
+                  <span className={`text-4xl md:text-5xl font-bold font-heading ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
                     {plan.price}
                   </span>
                   {plan.duration && (
-                    <span className={`text-sm font-medium ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
+                    <span className={`text-xs md:text-sm font-medium ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
                       {plan.duration}
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-4 md:mb-8">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
                     {feature.included ? (
@@ -109,7 +109,7 @@ export default function PricingCards() {
                     ) : (
                       <X className="w-5 h-5 shrink-0 text-slate-300" />
                     )}
-                    <span className={`text-sm ${
+                    <span className={`text-xs md:text-sm ${
                       plan.popular 
                         ? (feature.included ? 'text-slate-300' : 'text-slate-600')
                         : (feature.included ? 'text-slate-700' : 'text-slate-400')
@@ -122,7 +122,7 @@ export default function PricingCards() {
 
               <Link
                 href="/contact"
-                className={`block w-full py-4 px-6 rounded-full text-center font-bold transition-all duration-300 ${
+                className={`block w-full py-2 md:py-4 px-3 md:px-6 rounded-full text-center font-bold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-primary-600 text-white hover:bg-primary-500 shadow-lg shadow-primary-600/25'
                     : 'bg-primary-50 text-primary-600 hover:bg-primary-100'

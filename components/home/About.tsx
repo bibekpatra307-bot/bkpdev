@@ -7,22 +7,22 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-12 md:py-24 bg-slate-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           
           {/* Left Content */}
           <div>
-            <p className="text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">About Us</p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6 leading-tight">
+            <p className="text-xs md:text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">About Us</p>
+            <h2 className="text-2xl md:text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-3 md:mb-6 leading-tight">
               Building The Future <br />
               <span className="text-primary-600">With Technology</span>
             </h2>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-slate-600 mb-4 md:mb-8 leading-relaxed">
               BKP Developers is a leading software development company delivering innovative, reliable and high-quality digital solutions. We transform ideas into powerful digital products that drive growth and success.
             </p>
 
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-4 mb-5 md:mb-10">
               {[
                 'Dedicated & Experienced Team',
                 'On-Time Delivery',
@@ -44,7 +44,7 @@ export default function About() {
 
             <Link
               href="/about"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-primary-600 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-600/30"
+              className="inline-flex items-center justify-center gap-2 px-4 md:px-8 py-2 md:py-4 text-sm md:text-base font-semibold text-white bg-primary-600 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-600/30"
             >
               Learn More About Us
               <ArrowRight className="w-5 h-5" />
@@ -61,8 +61,8 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
                {/* Using placeholder until actual image is available */}
-               <Image
-                 src="https://picsum.photos/seed/bkp-about/800/600"
+               <Image referrerPolicy="no-referrer"
+                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
                  alt="BKP Developers Office"
                  fill
                  className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -73,11 +73,11 @@ export default function About() {
                {/* Logo Overlay */}
                <div className="absolute bottom-8 left-8 flex items-center gap-3">
                  <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                   <span className="text-xl font-bold text-primary-600">BKP</span>
+                   <span className="text-lg md:text-xl font-bold text-primary-600">BKP</span>
                  </div>
                  <div>
-                   <p className="text-white font-bold text-lg leading-tight">BKP DEVELOPERS</p>
-                   <p className="text-white/80 text-sm">Innovate. Develop. Deliver.</p>
+                   <p className="text-white font-bold text-base md:text-lg leading-tight">BKP DEVELOPERS</p>
+                   <p className="text-white/80 text-xs md:text-sm">Innovate. Develop. Deliver.</p>
                  </div>
                </div>
             </div>

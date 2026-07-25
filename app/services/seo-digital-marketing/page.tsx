@@ -23,7 +23,7 @@ export default function SEODigitalMarketing() {
           'Email Marketing Campaigns',
           'Web Analytics & Performance Reporting'
         ]}
-        image="https://picsum.photos/seed/seo/800/600"
+        image="https://images.unsplash.com/photo-1504384545592-4d5ce2da580a?w=800&q=80"
       />
       <CTA />
     </>

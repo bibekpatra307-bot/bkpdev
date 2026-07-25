@@ -23,7 +23,7 @@ export default function UIUXDesign() {
           'Usability Testing & Optimization',
           'Interactive Animations & Micro-interactions'
         ]}
-        image="https://picsum.photos/seed/uiux/800/600"
+        image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
       />
       <CTA />
     </>

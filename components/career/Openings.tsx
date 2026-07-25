@@ -41,19 +41,19 @@ const jobs = [
 
 export default function Openings() {
   return (
-    <section className="py-24 bg-white relative -mt-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-24 bg-white relative -mt-10">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-slate-900 mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-2xl md:text-3xl sm:text-4xl font-heading font-bold text-slate-900 mb-2 md:mb-4">
             Open Positions
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-base md:text-lg text-slate-600">
             Find the right role for you and help us build amazing digital products.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-3 md:gap-6">
           {jobs.map((job, index) => (
             <motion.div
               key={job.id}
@@ -61,20 +61,20 @@ export default function Openings() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-slate-50 border border-slate-100 rounded-3xl p-8 hover:shadow-xl transition-all duration-300"
+              className="group bg-slate-50 border border-slate-100 rounded-3xl p-4 md:p-8 hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex justify-between items-start mb-4">
+              <div className="flex justify-between items-start mb-2 md:mb-4">
                 <div>
-                  <span className="text-primary-600 text-xs font-bold uppercase tracking-wider mb-2 block">
+                  <span className="text-primary-600 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2 block">
                     {job.department}
                   </span>
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-primary-600 transition-colors">
                     {job.title}
                   </h3>
                 </div>
               </div>
               
-              <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-6">
+              <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm text-slate-500 mb-3 md:mb-6">
                 <div className="flex items-center gap-1.5">
                   <MapPin className="w-4 h-4" />
                   {job.location}
@@ -85,13 +85,13 @@ export default function Openings() {
                 </div>
               </div>
 
-              <p className="text-slate-600 text-sm leading-relaxed mb-8 line-clamp-2">
+              <p className="text-slate-600 text-xs md:text-sm leading-relaxed mb-4 md:mb-8 line-clamp-2">
                 {job.description}
               </p>
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-primary-600 bg-primary-50 rounded-full group-hover:bg-primary-600 group-hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-3 md:px-6 py-3 text-xs md:text-sm font-semibold text-primary-600 bg-primary-50 rounded-full group-hover:bg-primary-600 group-hover:text-white transition-all duration-300"
               >
                 Apply Now
                 <ArrowRight className="w-4 h-4" />

@@ -23,7 +23,7 @@ export default function AISoftwareSolutions() {
           'Predictive Analytics Dashboards',
           'Legacy System Modernization'
         ]}
-        image="https://picsum.photos/seed/aisoftware/800/600"
+        image="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80"
       />
       <CTA />
     </>

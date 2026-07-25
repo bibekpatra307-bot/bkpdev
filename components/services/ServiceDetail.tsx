@@ -15,11 +15,11 @@ interface ServiceDetailProps {
 
 export default function ServiceDetail({ title, description, icon, features, image }: ServiceDetailProps) {
   return (
-    <section className="pt-32 pb-24 bg-slate-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="pt-16 md:pt-32 pb-12 md:pb-24 bg-slate-50 min-h-screen">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-sm text-slate-500 mb-8">
+        <div className="flex items-center gap-2 text-xs md:text-sm text-slate-500 mb-4 md:mb-8">
           <Link href="/" className="hover:text-primary-600">Home</Link>
           <span>/</span>
           <Link href="/services" className="hover:text-primary-600">Services</Link>
@@ -27,22 +27,22 @@ export default function ServiceDetail({ title, description, icon, features, imag
           <span className="text-slate-900 font-medium">{title}</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           
           {/* Content */}
           <div>
-            <div className="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 mb-8">
+            <div className="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 mb-4 md:mb-8">
               {icon}
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-2xl md:text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-slate-900 mb-3 md:mb-6 leading-tight">
               {title}
             </h1>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-slate-600 mb-4 md:mb-8 leading-relaxed">
               {description}
             </p>
 
-            <h3 className="text-xl font-bold text-slate-900 mb-4">What we offer:</h3>
-            <ul className="space-y-4 mb-10">
+            <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-4">What we offer:</h3>
+            <ul className="space-y-4 mb-5 md:mb-10">
               {features.map((feature, index) => (
                 <motion.li 
                   key={index}
@@ -59,7 +59,7 @@ export default function ServiceDetail({ title, description, icon, features, imag
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-primary-600 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-600/30"
+              className="inline-flex items-center justify-center gap-2 px-4 md:px-8 py-2 md:py-4 text-sm md:text-base font-semibold text-white bg-primary-600 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-600/30"
             >
               Request a Proposal
               <ArrowRight className="w-5 h-5" />
@@ -75,7 +75,7 @@ export default function ServiceDetail({ title, description, icon, features, imag
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-white border border-slate-200 p-2">
                <div className="relative w-full h-full rounded-2xl overflow-hidden">
-                 <Image
+                 <Image referrerPolicy="no-referrer"
                    src={image}
                    alt={title}
                    fill
