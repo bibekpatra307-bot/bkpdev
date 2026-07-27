@@ -20,6 +20,7 @@ const navLinks = [
       { name: 'E-commerce Solutions', path: '/services/e-commerce-solutions' },
       { name: 'AI & Software Solutions', path: '/services/ai-software-solutions' },
       { name: 'SEO & Digital Marketing', path: '/services/seo-digital-marketing' },
+      { name: 'Maintenance & Support', path: '/services/maintenance-support' },
     ],
   },
   { name: 'Portfolio', path: '/portfolio' },

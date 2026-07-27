@@ -1,4 +1,6 @@
-'use client';
+import re
+
+new_content = """'use client';
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -100,3 +102,7 @@ export default function PortfolioList() {
     </section>
   );
 }
+"""
+
+with open('components/portfolio/PortfolioList.tsx', 'w') as f:
+    f.write(new_content)

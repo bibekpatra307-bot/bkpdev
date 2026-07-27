@@ -111,25 +111,28 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+911234567890" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">+91 12345 67890</a>
+                  <a href="tel:+918280482686" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">+91 8280482686</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <a href="mailto:hello@bkpdevelopers.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">hello@bkpdevelopers.com</a>
+                  <a href="mailto:inboxtobibek@gmail.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block mb-1">inboxtobibek@gmail.com</a>
+                  <a href="mailto:support@bkpdevelopers.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">support@bkpdevelopers.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs md:text-sm text-slate-400">11th Floor, Techno Hub, Near VR Mall, Surat, Gujarat - 395007, India</p>
+                  <p className="text-xs md:text-sm text-slate-400 mb-1">Mayurbhanj, Odisha, India</p>
+                  <p className="text-xs md:text-sm text-slate-400">Jamshedpur, Jharkhand, India</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-xs md:text-sm text-slate-400">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                  <p className="text-xs md:text-sm text-slate-400 mb-1">Mon – Sat: 10:00 AM – 7:00 PM</p>
+                  <p className="text-xs md:text-sm text-slate-400">Sunday Closed</p>
                 </div>
               </li>
             </ul>

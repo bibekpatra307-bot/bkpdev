@@ -7,22 +7,22 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'LearnHub',
-    category: 'E-learning Platform',
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80',
-    path: '/portfolio',
+    title: 'Bibek Books',
+    category: 'Book Publishing Platform',
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800',
+    path: 'https://bibekbook.store/',
   },
   {
-    title: 'FoodieX',
-    category: 'Food Delivery App',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80',
-    path: '/portfolio',
+    title: 'GenGram',
+    category: 'AI Social Media Platform',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800',
+    path: 'https://gengram.online/',
   },
   {
-    title: 'DreamHome',
-    category: 'Real Estate Website',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80',
-    path: '/portfolio',
+    title: 'Bibek Patra Official',
+    category: 'Personal Brand Website',
+    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800',
+    path: 'https://bibekpatra.site/',
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group"
             >
-              <Link href={project.path} className="block">
+              <Link href={project.path} target="_blank" rel="noopener noreferrer" className="block">
                 <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-6 aspect-[4/3] bg-slate-100">
                   <Image referrerPolicy="no-referrer"
                     src={project.image}
@@ -79,7 +79,7 @@ export default function Projects() {
                   {project.category}
                 </p>
                 <div className="flex items-center text-primary-600 font-medium text-xs md:text-sm">
-                  View Project
+                  View Live Project
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
