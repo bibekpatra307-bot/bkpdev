@@ -1,0 +1,1102 @@
+[
+  {
+    "name": "Business Website",
+    "slug": "business-website",
+    "category": "Web Development"
+  },
+  {
+    "name": "E-commerce Store",
+    "slug": "e-commerce-store",
+    "category": "Web Development"
+  },
+  {
+    "name": "Landing Page",
+    "slug": "landing-page",
+    "category": "Web Development"
+  },
+  {
+    "name": "Portfolio Website",
+    "slug": "portfolio-website",
+    "category": "Web Development"
+  },
+  {
+    "name": "Web App",
+    "slug": "web-app",
+    "category": "Web Development"
+  },
+  {
+    "name": "SaaS Platform",
+    "slug": "saas-platform",
+    "category": "Web Development"
+  },
+  {
+    "name": "Blog",
+    "slug": "blog",
+    "category": "Web Development"
+  },
+  {
+    "name": "CMS Setup",
+    "slug": "cms-setup",
+    "category": "Web Development"
+  },
+  {
+    "name": "API Development",
+    "slug": "api-development",
+    "category": "Web Development"
+  },
+  {
+    "name": "Web Portal",
+    "slug": "web-portal",
+    "category": "Web Development"
+  },
+  {
+    "name": "Progressive Web App",
+    "slug": "progressive-web-app",
+    "category": "Web Development"
+  },
+  {
+    "name": "Website Redesign",
+    "slug": "website-redesign",
+    "category": "Web Development"
+  },
+  {
+    "name": "Frontend Development",
+    "slug": "frontend-development",
+    "category": "Web Development"
+  },
+  {
+    "name": "Backend Development",
+    "slug": "backend-development",
+    "category": "Web Development"
+  },
+  {
+    "name": "Full Stack Development",
+    "slug": "full-stack-development",
+    "category": "Web Development"
+  },
+  {
+    "name": "Web Scraping",
+    "slug": "web-scraping",
+    "category": "Web Development"
+  },
+  {
+    "name": "Custom WordPress",
+    "slug": "custom-wordpress",
+    "category": "Web Development"
+  },
+  {
+    "name": "Shopify Store",
+    "slug": "shopify-store",
+    "category": "Web Development"
+  },
+  {
+    "name": "Web Maintenance",
+    "slug": "web-maintenance",
+    "category": "Web Development"
+  },
+  {
+    "name": "Android App",
+    "slug": "android-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "iOS App",
+    "slug": "ios-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "React Native App",
+    "slug": "react-native-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Flutter App",
+    "slug": "flutter-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Cross-Platform App",
+    "slug": "cross-platform-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Mobile Game",
+    "slug": "mobile-game",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Enterprise App",
+    "slug": "enterprise-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "App UI/UX",
+    "slug": "app-ui/ux",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "App Maintenance",
+    "slug": "app-maintenance",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "App Store Optimization",
+    "slug": "app-store-optimization",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "App Prototyping",
+    "slug": "app-prototyping",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Swift App",
+    "slug": "swift-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Kotlin App",
+    "slug": "kotlin-app",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "AI Chatbot",
+    "slug": "ai-chatbot",
+    "category": "AI Services"
+  },
+  {
+    "name": "Machine Learning Model",
+    "slug": "machine-learning-model",
+    "category": "AI Services"
+  },
+  {
+    "name": "Natural Language Processing",
+    "slug": "natural-language-processing",
+    "category": "AI Services"
+  },
+  {
+    "name": "Computer Vision",
+    "slug": "computer-vision",
+    "category": "AI Services"
+  },
+  {
+    "name": "Predictive Analytics",
+    "slug": "predictive-analytics",
+    "category": "AI Services"
+  },
+  {
+    "name": "AI Recommendation Engine",
+    "slug": "ai-recommendation-engine",
+    "category": "AI Services"
+  },
+  {
+    "name": "Generative AI Solution",
+    "slug": "generative-ai-solution",
+    "category": "AI Services"
+  },
+  {
+    "name": "OpenAI Integration",
+    "slug": "openai-integration",
+    "category": "AI Services"
+  },
+  {
+    "name": "AI Automation",
+    "slug": "ai-automation",
+    "category": "AI Services"
+  },
+  {
+    "name": "Data Science Consulting",
+    "slug": "data-science-consulting",
+    "category": "AI Services"
+  },
+  {
+    "name": "Custom AI Assistant",
+    "slug": "custom-ai-assistant",
+    "category": "AI Services"
+  },
+  {
+    "name": "AWS Setup",
+    "slug": "aws-setup",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Google Cloud Architecture",
+    "slug": "google-cloud-architecture",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Azure Migration",
+    "slug": "azure-migration",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Serverless Architecture",
+    "slug": "serverless-architecture",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Cloud Storage Solutions",
+    "slug": "cloud-storage-solutions",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Cloud Security",
+    "slug": "cloud-security",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Cloud Cost Optimization",
+    "slug": "cloud-cost-optimization",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Infrastructure as Code",
+    "slug": "infrastructure-as-code",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Database Migration",
+    "slug": "database-migration",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Cloud Monitoring",
+    "slug": "cloud-monitoring",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "CI/CD Pipeline",
+    "slug": "ci/cd-pipeline",
+    "category": "DevOps"
+  },
+  {
+    "name": "Docker Containerization",
+    "slug": "docker-containerization",
+    "category": "DevOps"
+  },
+  {
+    "name": "Kubernetes Clustering",
+    "slug": "kubernetes-clustering",
+    "category": "DevOps"
+  },
+  {
+    "name": "Infrastructure Setup",
+    "slug": "infrastructure-setup",
+    "category": "DevOps"
+  },
+  {
+    "name": "Automated Testing",
+    "slug": "automated-testing",
+    "category": "DevOps"
+  },
+  {
+    "name": "Server Management",
+    "slug": "server-management",
+    "category": "DevOps"
+  },
+  {
+    "name": "Performance Optimization",
+    "slug": "performance-optimization",
+    "category": "DevOps"
+  },
+  {
+    "name": "Site Reliability Engineering",
+    "slug": "site-reliability-engineering",
+    "category": "DevOps"
+  },
+  {
+    "name": "Version Control Setup",
+    "slug": "version-control-setup",
+    "category": "DevOps"
+  },
+  {
+    "name": "Wireframing",
+    "slug": "wireframing",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Prototyping",
+    "slug": "prototyping",
+    "category": "UI/UX"
+  },
+  {
+    "name": "User Research",
+    "slug": "user-research",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Usability Testing",
+    "slug": "usability-testing",
+    "category": "UI/UX"
+  },
+  {
+    "name": "UI Design",
+    "slug": "ui-design",
+    "category": "UI/UX"
+  },
+  {
+    "name": "UX Audit",
+    "slug": "ux-audit",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Design System",
+    "slug": "design-system",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Mobile App UI",
+    "slug": "mobile-app-ui",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Web App UI",
+    "slug": "web-app-ui",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Dashboard Design",
+    "slug": "dashboard-design",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Logo Design",
+    "slug": "logo-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Brand Identity",
+    "slug": "brand-identity",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Business Card",
+    "slug": "business-card",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Social Media Graphics",
+    "slug": "social-media-graphics",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Illustration",
+    "slug": "illustration",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Infographics",
+    "slug": "infographics",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Flyer Design",
+    "slug": "flyer-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Brochure Design",
+    "slug": "brochure-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Packaging Design",
+    "slug": "packaging-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Banner Design",
+    "slug": "banner-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Social Media Management",
+    "slug": "social-media-management",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Email Marketing",
+    "slug": "email-marketing",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Content Marketing",
+    "slug": "content-marketing",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "PPC Campaign",
+    "slug": "ppc-campaign",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Conversion Rate Optimization",
+    "slug": "conversion-rate-optimization",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Affiliate Marketing",
+    "slug": "affiliate-marketing",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Influencer Marketing",
+    "slug": "influencer-marketing",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Digital Strategy",
+    "slug": "digital-strategy",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "On-Page SEO",
+    "slug": "on-page-seo",
+    "category": "SEO"
+  },
+  {
+    "name": "Off-Page SEO",
+    "slug": "off-page-seo",
+    "category": "SEO"
+  },
+  {
+    "name": "Technical SEO",
+    "slug": "technical-seo",
+    "category": "SEO"
+  },
+  {
+    "name": "Local SEO",
+    "slug": "local-seo",
+    "category": "SEO"
+  },
+  {
+    "name": "Keyword Research",
+    "slug": "keyword-research",
+    "category": "SEO"
+  },
+  {
+    "name": "SEO Audit",
+    "slug": "seo-audit",
+    "category": "SEO"
+  },
+  {
+    "name": "Link Building",
+    "slug": "link-building",
+    "category": "SEO"
+  },
+  {
+    "name": "Competitor Analysis",
+    "slug": "competitor-analysis",
+    "category": "SEO"
+  },
+  {
+    "name": "Voice Search Optimization",
+    "slug": "voice-search-optimization",
+    "category": "SEO"
+  },
+  {
+    "name": "Resume Writing",
+    "slug": "resume-writing",
+    "category": "Resume Services"
+  },
+  {
+    "name": "CV Design",
+    "slug": "cv-design",
+    "category": "Resume Services"
+  },
+  {
+    "name": "LinkedIn Optimization",
+    "slug": "linkedin-optimization",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Cover Letter",
+    "slug": "cover-letter",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Interview Preparation",
+    "slug": "interview-preparation",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Career Coaching",
+    "slug": "career-coaching",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Executive Resume",
+    "slug": "executive-resume",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Tech Resume",
+    "slug": "tech-resume",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Portfolio Design",
+    "slug": "portfolio-design",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "GitHub Profile Optimization",
+    "slug": "github-profile-optimization",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Case Study Writing",
+    "slug": "case-study-writing",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Dribbble Profile Setup",
+    "slug": "dribbble-profile-setup",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Behance Portfolio",
+    "slug": "behance-portfolio",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Space Planning",
+    "slug": "space-planning",
+    "category": "Interior Design"
+  },
+  {
+    "name": "3D Rendering",
+    "slug": "3d-rendering",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Furniture Selection",
+    "slug": "furniture-selection",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Color Consultation",
+    "slug": "color-consultation",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Lighting Design",
+    "slug": "lighting-design",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Commercial Interior",
+    "slug": "commercial-interior",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Residential Interior",
+    "slug": "residential-interior",
+    "category": "Interior Design"
+  },
+  {
+    "name": "YouTube Editing",
+    "slug": "youtube-editing",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Promo Video",
+    "slug": "promo-video",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Corporate Video",
+    "slug": "corporate-video",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Music Video",
+    "slug": "music-video",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Animation",
+    "slug": "animation",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Motion Graphics",
+    "slug": "motion-graphics",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Vlog Editing",
+    "slug": "vlog-editing",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Color Grading",
+    "slug": "color-grading",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Video Ads",
+    "slug": "video-ads",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Book Formatting",
+    "slug": "book-formatting",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Cover Design",
+    "slug": "cover-design",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Self-Publishing Setup",
+    "slug": "self-publishing-setup",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Manuscript Editing",
+    "slug": "manuscript-editing",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "eBook Conversion",
+    "slug": "ebook-conversion",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Author Website",
+    "slug": "author-website",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Book Marketing",
+    "slug": "book-marketing",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Tech Strategy",
+    "slug": "tech-strategy",
+    "category": "Consulting"
+  },
+  {
+    "name": "Agile Coaching",
+    "slug": "agile-coaching",
+    "category": "Consulting"
+  },
+  {
+    "name": "Business Process Optimization",
+    "slug": "business-process-optimization",
+    "category": "Consulting"
+  },
+  {
+    "name": "IT Consulting",
+    "slug": "it-consulting",
+    "category": "Consulting"
+  },
+  {
+    "name": "Digital Transformation",
+    "slug": "digital-transformation",
+    "category": "Consulting"
+  },
+  {
+    "name": "Startup Mentoring",
+    "slug": "startup-mentoring",
+    "category": "Consulting"
+  },
+  {
+    "name": "Product Management",
+    "slug": "product-management",
+    "category": "Consulting"
+  },
+  {
+    "name": "Cybersecurity Audit",
+    "slug": "cybersecurity-audit",
+    "category": "Consulting"
+  },
+  {
+    "name": "Infographics Maintenance",
+    "slug": "infographics-maintenance",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "iOS App Development",
+    "slug": "ios-app-development",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Influencer Marketing Development",
+    "slug": "influencer-marketing-development",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Executive Resume Optimization",
+    "slug": "executive-resume-optimization",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Cover Letter Maintenance",
+    "slug": "cover-letter-maintenance",
+    "category": "Resume Services"
+  },
+  {
+    "name": "OpenAI Integration Optimization",
+    "slug": "openai-integration-optimization",
+    "category": "AI Services"
+  },
+  {
+    "name": "Video Ads Strategy",
+    "slug": "video-ads-strategy",
+    "category": "Video Editing"
+  },
+  {
+    "name": "UI Design Audit",
+    "slug": "ui-design-audit",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Business Card Review",
+    "slug": "business-card-review",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Self-Publishing Setup Development",
+    "slug": "self-publishing-setup-development",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "OpenAI Integration Audit",
+    "slug": "openai-integration-audit",
+    "category": "AI Services"
+  },
+  {
+    "name": "Business Card Optimization",
+    "slug": "business-card-optimization",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Serverless Architecture Audit",
+    "slug": "serverless-architecture-audit",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Cover Letter Optimization",
+    "slug": "cover-letter-optimization",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Motion Graphics Setup",
+    "slug": "motion-graphics-setup",
+    "category": "Video Editing"
+  },
+  {
+    "name": "API Development Design",
+    "slug": "api-development-design",
+    "category": "Web Development"
+  },
+  {
+    "name": "Dribbble Profile Setup Audit",
+    "slug": "dribbble-profile-setup-audit",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "eBook Conversion Strategy",
+    "slug": "ebook-conversion-strategy",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Motion Graphics Development",
+    "slug": "motion-graphics-development",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Cloud Cost Optimization Maintenance",
+    "slug": "cloud-cost-optimization-maintenance",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Digital Strategy Review",
+    "slug": "digital-strategy-review",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Swift App Maintenance",
+    "slug": "swift-app-maintenance",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Voice Search Optimization Strategy",
+    "slug": "voice-search-optimization-strategy",
+    "category": "SEO"
+  },
+  {
+    "name": "Enterprise App Optimization",
+    "slug": "enterprise-app-optimization",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Email Marketing Optimization",
+    "slug": "email-marketing-optimization",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Promo Video Optimization",
+    "slug": "promo-video-optimization",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Book Marketing Development",
+    "slug": "book-marketing-development",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Serverless Architecture Strategy",
+    "slug": "serverless-architecture-strategy",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "AI Automation Optimization",
+    "slug": "ai-automation-optimization",
+    "category": "AI Services"
+  },
+  {
+    "name": "Azure Migration Design",
+    "slug": "azure-migration-design",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Computer Vision Strategy",
+    "slug": "computer-vision-strategy",
+    "category": "AI Services"
+  },
+  {
+    "name": "Behance Portfolio Consulting",
+    "slug": "behance-portfolio-consulting",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Product Management Maintenance",
+    "slug": "product-management-maintenance",
+    "category": "Consulting"
+  },
+  {
+    "name": "Blog Strategy",
+    "slug": "blog-strategy",
+    "category": "Web Development"
+  },
+  {
+    "name": "App UI/UX Optimization",
+    "slug": "app-ui/ux-optimization",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Color Grading Strategy",
+    "slug": "color-grading-strategy",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Enterprise App Design",
+    "slug": "enterprise-app-design",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Computer Vision Consulting",
+    "slug": "computer-vision-consulting",
+    "category": "AI Services"
+  },
+  {
+    "name": "Startup Mentoring Development",
+    "slug": "startup-mentoring-development",
+    "category": "Consulting"
+  },
+  {
+    "name": "Usability Testing Maintenance",
+    "slug": "usability-testing-maintenance",
+    "category": "UI/UX"
+  },
+  {
+    "name": "Social Media Graphics Audit",
+    "slug": "social-media-graphics-audit",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Author Website Review",
+    "slug": "author-website-review",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Azure Migration Setup",
+    "slug": "azure-migration-setup",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "App Prototyping Review",
+    "slug": "app-prototyping-review",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Executive Resume Consulting",
+    "slug": "executive-resume-consulting",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Cover Letter Strategy",
+    "slug": "cover-letter-strategy",
+    "category": "Resume Services"
+  },
+  {
+    "name": "Manuscript Editing Consulting",
+    "slug": "manuscript-editing-consulting",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "Infrastructure as Code Consulting",
+    "slug": "infrastructure-as-code-consulting",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Video Ads Maintenance",
+    "slug": "video-ads-maintenance",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Dribbble Profile Setup Setup",
+    "slug": "dribbble-profile-setup-setup",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Conversion Rate Optimization Setup",
+    "slug": "conversion-rate-optimization-setup",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "GitHub Profile Optimization Design",
+    "slug": "github-profile-optimization-design",
+    "category": "Portfolio Services"
+  },
+  {
+    "name": "Illustration Audit",
+    "slug": "illustration-audit",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Vlog Editing Maintenance",
+    "slug": "vlog-editing-maintenance",
+    "category": "Video Editing"
+  },
+  {
+    "name": "App Prototyping Setup",
+    "slug": "app-prototyping-setup",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Furniture Selection Audit",
+    "slug": "furniture-selection-audit",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Custom AI Assistant Consulting",
+    "slug": "custom-ai-assistant-consulting",
+    "category": "AI Services"
+  },
+  {
+    "name": "IT Consulting Review",
+    "slug": "it-consulting-review",
+    "category": "Consulting"
+  },
+  {
+    "name": "App Prototyping Strategy",
+    "slug": "app-prototyping-strategy",
+    "category": "Mobile Development"
+  },
+  {
+    "name": "Keyword Research Development",
+    "slug": "keyword-research-development",
+    "category": "SEO"
+  },
+  {
+    "name": "Space Planning Consulting",
+    "slug": "space-planning-consulting",
+    "category": "Interior Design"
+  },
+  {
+    "name": "Generative AI Solution Review",
+    "slug": "generative-ai-solution-review",
+    "category": "AI Services"
+  },
+  {
+    "name": "Author Website Setup",
+    "slug": "author-website-setup",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "AWS Setup Consulting",
+    "slug": "aws-setup-consulting",
+    "category": "Cloud Solutions"
+  },
+  {
+    "name": "Vlog Editing Development",
+    "slug": "vlog-editing-development",
+    "category": "Video Editing"
+  },
+  {
+    "name": "Technical SEO Consulting",
+    "slug": "technical-seo-consulting",
+    "category": "SEO"
+  },
+  {
+    "name": "Social Media Graphics Design",
+    "slug": "social-media-graphics-design",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Packaging Design Development",
+    "slug": "packaging-design-development",
+    "category": "Graphic Design"
+  },
+  {
+    "name": "Video Ads Audit",
+    "slug": "video-ads-audit",
+    "category": "Video Editing"
+  },
+  {
+    "name": "AI Automation Design",
+    "slug": "ai-automation-design",
+    "category": "AI Services"
+  },
+  {
+    "name": "Automated Testing Design",
+    "slug": "automated-testing-design",
+    "category": "DevOps"
+  },
+  {
+    "name": "Kubernetes Clustering Development",
+    "slug": "kubernetes-clustering-development",
+    "category": "DevOps"
+  },
+  {
+    "name": "Tech Strategy Consulting",
+    "slug": "tech-strategy-consulting",
+    "category": "Consulting"
+  },
+  {
+    "name": "PPC Campaign Optimization",
+    "slug": "ppc-campaign-optimization",
+    "category": "Digital Marketing"
+  },
+  {
+    "name": "Book Marketing Consulting",
+    "slug": "book-marketing-consulting",
+    "category": "Book Publishing"
+  },
+  {
+    "name": "SEO Audit Review",
+    "slug": "seo-audit-review",
+    "category": "SEO"
+  },
+  {
+    "name": "Cover Design Review",
+    "slug": "cover-design-review",
+    "category": "Book Publishing"
+  }
+]

@@ -1,167 +1,65 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'motion/react';
-import { ArrowRight, LayoutGrid, Code2, Smartphone } from 'lucide-react';
+import HeroVisual from './HeroVisual';
+import HeroSearch from './HeroSearch';
 
 export default function Hero() {
   return (
-    <section className="relative pt-16 md:pt-32 pb-10 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50">
-      {/* Background Elements */}
-      <div className="absolute top-0 inset-x-0 h-full bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_0%,rgba(248,250,252,1)_100%)] pointer-events-none z-0"></div>
-      <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary-100/50 blur-[100px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-[10%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-100/50 blur-[120px] pointer-events-none z-0"></div>
-
-      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-8 items-center">
-          
-          {/* Left Content */}
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-primary-600 text-xs md:text-sm font-medium mb-3 md:mb-6"
-            >
-              <span className="w-2 h-2 rounded-full bg-primary-600 animate-pulse"></span>
-              Welcome to BKP Developers
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl md:text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-3 md:mb-6"
-            >
-              We Build Digital Solutions That Drive <br className="hidden sm:block" />
-              <span className="text-gradient">Real Business Growth</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-base md:text-lg text-slate-600 mb-4 md:mb-8 leading-relaxed max-w-xl"
-            >
-              We are a creative team of developers, designers and problem solvers building modern websites, mobile apps & intelligent digital solutions.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-2 md:gap-4 mb-6 md:mb-12"
-            >
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-4 md:px-8 py-2 md:py-4 text-sm md:text-base font-semibold text-white bg-primary-600 rounded-full hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-600/30 hover:shadow-primary-600/40 hover:-translate-y-0.5"
-              >
-                Get a Free Quote
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center gap-2 px-4 md:px-8 py-2 md:py-4 text-sm md:text-base font-semibold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 hover:-translate-y-0.5"
-              >
-                View Our Work
-                <LayoutGrid className="w-5 h-5" />
-              </Link>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-center gap-2 md:gap-4"
-            >
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden relative">
-                    <Image referrerPolicy="no-referrer"
-                      src={`https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80`}
-                      alt="Client"
-                      fill
-                      sizes="40px"
-                      className="object-cover"
-                      unoptimized
-                    />
-                  </div>
-                ))}
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-primary-100 flex items-center justify-center text-[10px] md:text-xs font-bold text-primary-700 z-10 relative">
-                  +50
-                </div>
-              </div>
-              <div className="text-xs md:text-sm font-medium text-slate-600">
-                <span className="text-slate-900 font-bold block">100+ Clients</span>
-                Trusted Worldwide
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Right Image/Mockup Area */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative lg:h-[600px] hidden md:block"
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0a0a0e] pt-28 pb-32">
+      <HeroVisual />
+      
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-6 flex flex-col items-center text-center mt-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center w-full"
+        >
+          {/* Welcome Badge */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/60 border border-slate-800/80 backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.1)] mb-10"
           >
-            {/* Main Mockup Container */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] aspect-square">
-               <div className="relative w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-2xl border border-slate-700 overflow-hidden flex flex-col">
-                  {/* Mockup Header */}
-                  <div className="h-10 border-b border-slate-700 flex items-center px-2 md:px-4 gap-2 bg-slate-900/50">
-                    <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                  </div>
-                  {/* Mockup Content */}
-                  <div className="flex-1 p-3 md:p-6 relative">
-                    <div className="font-mono text-xs md:text-sm text-slate-300 space-y-2 opacity-70">
-                      <p><span className="text-pink-400">import</span> {'{'} Innovation {'}'} <span className="text-pink-400">from</span> <span className="text-green-400">'bkp-developers'</span>;</p>
-                      <p><span className="text-pink-400">const</span> solution = <span className="text-blue-400">new</span> <span className="text-yellow-400">Innovation</span>();</p>
-                      <br/>
-                      <p>solution.<span className="text-yellow-400">build</span>({'{'}</p>
-                      <p className="pl-2 md:pl-4">quality: <span className="text-purple-400">100</span>,</p>
-                      <p className="pl-2 md:pl-4">performance: <span className="text-green-400">'optimized'</span>,</p>
-                      <p className="pl-2 md:pl-4">design: <span className="text-green-400">'premium'</span></p>
-                      <p>{'}'});</p>
-                    </div>
-                    
-                    {/* Floating Elements inside mockup */}
-                    <div className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/10 shadow-xl flex items-center gap-3">
-                       <div className="w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center">
-                         <Code2 className="w-5 h-5 text-white" />
-                       </div>
-                       <div>
-                         <p className="text-white text-xs md:text-sm font-semibold">Clean Code</p>
-                         <p className="text-slate-400 text-[10px] md:text-xs">Production Ready</p>
-                       </div>
-                    </div>
-                  </div>
-               </div>
-
-               {/* External Floating Elements */}
-               <motion.div 
-                 animate={{ y: [0, -10, 0] }}
-                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                 className="absolute -top-10 -left-10 bg-white rounded-2xl p-2 md:p-4 shadow-xl border border-slate-100 flex items-center gap-2 md:gap-4"
-               >
-                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
-                    <Smartphone className="w-6 h-6" />
-                 </div>
-                 <div>
-                   <p className="text-slate-900 font-bold text-xs md:text-sm">Mobile First</p>
-                   <p className="text-slate-500 text-[10px] md:text-xs">Fully Responsive</p>
-                 </div>
-               </motion.div>
-            </div>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span className="text-sm font-medium text-slate-300 tracking-wide">BKP Developers Intelligence Core</span>
           </motion.div>
 
-        </div>
+          {/* Main Headline */}
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1] sm:leading-[1.1] md:leading-[1.1] lg:leading-[1.1]"
+          >
+            We build digital solutions that drive real business growth.
+          </motion.h1>
+
+          {/* Description */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-8 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed"
+          >
+            BKP Developers engineers premium Websites, Mobile Apps, AI Solutions, Cloud Infrastructure, and Automation Systems tailored for scale and performance.
+          </motion.p>
+          
+          {/* AI Service Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full mt-12 mb-16 relative z-50"
+          >
+             <HeroSearch />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

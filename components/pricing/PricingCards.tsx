@@ -1,140 +1,135 @@
-'use client';
+"use client";
 
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Check, X } from 'lucide-react';
-import Link from 'next/link';
+import { Check } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-const plans = [
+const TIERS = [
   {
-    name: 'Basic',
-    description: 'Perfect for small businesses and startups.',
-    price: '$499',
-    duration: '/project',
+    name: "Starter",
+    price: "$999",
+    description: "Perfect for startups and small businesses looking to establish a digital presence.",
     features: [
-      { name: 'Custom Website Design', included: true },
-      { name: 'Responsive Layout', included: true },
-      { name: 'Up to 5 Pages', included: true },
-      { name: 'Basic SEO Setup', included: true },
-      { name: 'E-commerce Integration', included: false },
-      { name: 'Custom App Development', included: false },
-      { name: 'Priority Support', included: false },
+      "Responsive Website (Up to 5 Pages)",
+      "Basic SEO Optimization",
+      "Contact Form Integration",
+      "Mobile-First Design",
+      "1 Month Free Support"
     ],
-    popular: false,
+    buttonText: "Get Started",
+    popular: false
   },
   {
-    name: 'Professional',
-    description: 'Ideal for growing businesses needing more features.',
-    price: '$1,299',
-    duration: '/project',
+    name: "Professional",
+    price: "$2,499",
+    description: "Comprehensive solutions for growing businesses needing advanced functionality.",
     features: [
-      { name: 'Custom Website Design', included: true },
-      { name: 'Responsive Layout', included: true },
-      { name: 'Up to 15 Pages', included: true },
-      { name: 'Advanced SEO Setup', included: true },
-      { name: 'E-commerce Integration', included: true },
-      { name: 'Custom App Development', included: false },
-      { name: 'Priority Support', included: true },
+      "Custom Web Application",
+      "CMS Integration",
+      "E-commerce Capabilities (Up to 50 products)",
+      "Advanced SEO Setup",
+      "Analytics Dashboard",
+      "3 Months Free Support"
     ],
-    popular: true,
+    buttonText: "Start Building",
+    popular: true
   },
   {
-    name: 'Enterprise',
-    description: 'For large organizations requiring custom solutions.',
-    price: 'Custom',
-    duration: '',
+    name: "Enterprise",
+    price: "Custom",
+    description: "Full-scale digital transformation with custom architecture and AI integration.",
     features: [
-      { name: 'Custom Website Design', included: true },
-      { name: 'Responsive Layout', included: true },
-      { name: 'Unlimited Pages', included: true },
-      { name: 'Advanced SEO Setup', included: true },
-      { name: 'E-commerce Integration', included: true },
-      { name: 'Custom App Development', included: true },
-      { name: 'Priority Support', included: true },
+      "Full-Stack Web & Mobile App",
+      "AI & Machine Learning Integration",
+      "Cloud Infrastructure Setup",
+      "Automated Workflows & CI/CD",
+      "Dedicated Project Manager",
+      "24/7 Priority Support"
     ],
-    popular: false,
-  },
+    buttonText: "Contact Sales",
+    popular: false
+  }
 ];
 
 export default function PricingCards() {
+  const [highlighted, setHighlighted] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    // We defer the setHighlighted to avoid synchronously triggering it during render/hydration
+    let timeout: NodeJS.Timeout;
+    const checkHash = () => {
+      if (typeof window !== 'undefined' && window.location.hash === '#pricing') {
+        timeout = setTimeout(() => {
+          setHighlighted(true);
+          setTimeout(() => setHighlighted(false), 3000);
+        }, 100);
+      }
+    };
+    checkHash();
+    
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <section className="py-12 md:py-24 bg-white relative -mt-10">
-      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        
-        <div className="grid lg:grid-cols-3 gap-4 md:gap-8">
-          {plans.map((plan, index) => (
-            <motion.div
-              key={plan.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-3xl p-4 md:p-8 lg:p-10 border ${
-                plan.popular 
-                  ? 'bg-slate-900 border-slate-800 shadow-2xl shadow-primary-900/20 transform lg:-translate-y-4' 
-                  : 'bg-white border-slate-200 shadow-lg'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <span className="bg-primary-600 text-white text-[10px] md:text-xs font-bold uppercase tracking-wider py-1.5 px-2 md:px-4 rounded-full shadow-lg shadow-primary-600/30">
-                    Most Popular
-                  </span>
-                </div>
-              )}
+    <div 
+      className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto transition-all duration-700 ${
+        highlighted ? 'scale-[1.02]' : ''
+      }`}
+    >
+      {TIERS.map((tier, idx) => (
+        <motion.div
+          key={tier.name}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: idx * 0.1, duration: 0.5 }}
+          className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
+            tier.popular 
+              ? 'bg-slate-900 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.15)] md:-translate-y-4' 
+              : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
+          } ${highlighted && tier.popular ? 'ring-4 ring-blue-500/20 shadow-[0_0_60px_rgba(59,130,246,0.3)]' : ''}`}
+        >
+          {tier.popular && (
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full tracking-wide">
+              Most Popular
+            </div>
+          )}
 
-              <div className="text-center mb-4 md:mb-8">
-                <h3 className={`text-lg md:text-xl font-bold mb-2 ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
-                  {plan.name}
-                </h3>
-                <p className={`text-xs md:text-sm mb-3 md:mb-6 ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
-                  {plan.description}
-                </p>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className={`text-4xl md:text-5xl font-bold font-heading ${plan.popular ? 'text-white' : 'text-slate-900'}`}>
-                    {plan.price}
-                  </span>
-                  {plan.duration && (
-                    <span className={`text-xs md:text-sm font-medium ${plan.popular ? 'text-slate-400' : 'text-slate-500'}`}>
-                      {plan.duration}
-                    </span>
-                  )}
-                </div>
-              </div>
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
+            <p className="text-slate-400 text-sm h-10">{tier.description}</p>
+          </div>
 
-              <div className="space-y-4 mb-4 md:mb-8">
-                {plan.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    {feature.included ? (
-                      <Check className={`w-5 h-5 shrink-0 ${plan.popular ? 'text-primary-400' : 'text-primary-600'}`} />
-                    ) : (
-                      <X className="w-5 h-5 shrink-0 text-slate-300" />
-                    )}
-                    <span className={`text-xs md:text-sm ${
-                      plan.popular 
-                        ? (feature.included ? 'text-slate-300' : 'text-slate-600')
-                        : (feature.included ? 'text-slate-700' : 'text-slate-400')
-                    }`}>
-                      {feature.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
+          <div className="mb-8">
+            <div className="flex items-baseline gap-1">
+              <span className="text-4xl font-extrabold text-white">{tier.price}</span>
+              {tier.price !== "Custom" && <span className="text-slate-500 font-medium">/project</span>}
+            </div>
+          </div>
 
-              <Link
-                href="/contact"
-                className={`block w-full py-2 md:py-4 px-3 md:px-6 rounded-full text-center font-bold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-primary-600 text-white hover:bg-primary-500 shadow-lg shadow-primary-600/25'
-                    : 'bg-primary-50 text-primary-600 hover:bg-primary-100'
-                }`}
-              >
-                Choose {plan.name}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+          <ul className="flex-1 space-y-4 mb-8">
+            {tier.features.map((feature, fIdx) => (
+              <li key={fIdx} className="flex items-start gap-3">
+                <Check className={`w-5 h-5 shrink-0 ${tier.popular ? 'text-blue-400' : 'text-slate-500'}`} />
+                <span className="text-slate-300 text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
 
-      </div>
-    </section>
+          <button 
+            onClick={() => router.push('/contact')}
+            className={`w-full py-3.5 rounded-xl font-medium transition-colors ${
+              tier.popular
+                ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/20'
+                : 'bg-slate-800 hover:bg-slate-700 text-white'
+            }`}
+          >
+            {tier.buttonText}
+          </button>
+        </motion.div>
+      ))}
+    </div>
   );
 }
