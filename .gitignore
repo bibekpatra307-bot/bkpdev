@@ -1,5 +1,4 @@
-node_modules
-.next
+-e node_modules
 dist
 out
 coverage

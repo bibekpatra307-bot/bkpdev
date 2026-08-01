@@ -131,7 +131,7 @@
   },
   {
     "name": "App UI/UX",
-    "slug": "app-ui/ux",
+    "slug": "app-ui-ux",
     "category": "Mobile Development"
   },
   {
@@ -266,7 +266,7 @@
   },
   {
     "name": "CI/CD Pipeline",
-    "slug": "ci/cd-pipeline",
+    "slug": "ci-cd-pipeline",
     "category": "DevOps"
   },
   {
@@ -886,7 +886,7 @@
   },
   {
     "name": "App UI/UX Optimization",
-    "slug": "app-ui/ux-optimization",
+    "slug": "app-ui-ux-optimization",
     "category": "Mobile Development"
   },
   {

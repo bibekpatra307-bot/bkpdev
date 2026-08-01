@@ -17,7 +17,7 @@ export default function Technologies() {
           {[...technologies, ...technologies].map((tech, idx) => (
             <div
               key={`top-${tech.name}-${idx}`}
-              className="flex-shrink-0 mx-6 md:mx-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform hover:scale-110 [&>svg]:w-full [&>svg]:h-full"
+              className="flex-shrink-0 mx-6 md:mx-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform hover:scale-110 "
               title={tech.name}
               dangerouslySetInnerHTML={{ __html: tech.svg }}
             />
@@ -29,7 +29,7 @@ export default function Technologies() {
           {[...technologies, ...technologies].map((tech, idx) => (
             <div
               key={`bottom-${tech.name}-${idx}`}
-              className="flex-shrink-0 mx-6 md:mx-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform hover:scale-110 [&>svg]:w-full [&>svg]:h-full"
+              className="flex-shrink-0 mx-6 md:mx-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform hover:scale-110 "
               title={tech.name}
               dangerouslySetInnerHTML={{ __html: tech.svg }}
             />

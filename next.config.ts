@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**', 
+        pathname: '/**',
       },
       {
         protocol: 'https',
@@ -30,7 +30,9 @@ const nextConfig: NextConfig = {
       }
     ],
   },
-  
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     if (dev && process.env.DISABLE_HMR === 'true') {

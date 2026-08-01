@@ -94,7 +94,7 @@ export default function HeroVisual() {
       <div className="absolute inset-0 opacity-[0.03] mix-blend-plus-lighter" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.83v58.34h-58.34l-.83-.83V0h58.34zM27 16h6v4h-6v-4zm-8 8h22v4H19v-4zm0 8h22v4H19v-4zm-8 8h38v4H11v-4zm0 8h38v4H11v-4z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E")` }}></div>
 
       {/* Noise Texture */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+      <div className="absolute inset-0  opacity-20 mix-blend-overlay"></div>
 
       {/* 3. Glowing Particles */}
       <div className="absolute inset-0">
