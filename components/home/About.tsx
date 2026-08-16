@@ -62,7 +62,7 @@ export default function About() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
                {/* Using placeholder until actual image is available */}
                <Image referrerPolicy="no-referrer"
-                 src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
+                 src="/bkp-office-about.png"
                  alt="BKP Developers Office"
                  fill
                  className="object-cover transition-transform duration-700 group-hover:scale-105"
