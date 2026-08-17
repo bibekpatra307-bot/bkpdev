@@ -60,7 +60,7 @@ export default function WhoWeAre() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                <Image referrerPolicy="no-referrer"
-                 src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80"
+                 src="/whoweare-photo.png"
                  alt="Our Team"
                  fill
                  className="object-cover"
