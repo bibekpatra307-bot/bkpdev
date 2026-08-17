@@ -8,32 +8,32 @@ const team = [
   {
     name: 'Bibek Patra',
     role: 'CEO & Founder',
-    image: '/bibek-founder-photo.png',
+    image: '/about-photo/bibek-founder-photo.png',
   },
   {
     name: 'Prithvi Raj Munda',
     role: 'Project Manager',
-    image: '/prithvi-manager-photo.jpg',
+    image: '/about-photo/prithvi-manager-photo.jpg',
   },
   {
     name: 'Bhuban Mohakud',
     role: 'Tech Lead',
-    image: '/bhuban-techlead-photo.png',
+    image: '/about-photo/bhuban-techlead-photo.png',
   },
   {
     name: 'Sneha Kapoor',
     role: 'UI/UX Designer',
-    image: '/sneha-designer-photo.png',
+    image: '/about-photo/sneha-designer-photo.png',
   },
   {
     name: 'Vikas Singh',
     role: 'Backend Developer',
-    image: '/vikas-developer-photo.png',
+    image: '/about-photo/vikas-developer-photo.png',
   },
   {
     name: 'Neha Tiwari',
     role: 'QA Engineer',
-    image: '/neha-qe-photo.png',
+    image: '/about-photo/neha-qe-photo.png',
   },
 ];
 
