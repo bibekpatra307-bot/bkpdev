@@ -1,0 +1,16 @@
+{
+  "/api/chat/route": "/api/chat",
+  "/_not-found/page": "/_not-found",
+  "/page": "/",
+  "/services/[slug]/page": "/services/[slug]",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/career/page": "/career",
+  "/blog/page": "/blog",
+  "/faq/page": "/faq",
+  "/portfolio/page": "/portfolio",
+  "/pricing/page": "/pricing",
+  "/privacy-policy/page": "/privacy-policy",
+  "/services/page": "/services",
+  "/terms-conditions/page": "/terms-conditions"
+}
