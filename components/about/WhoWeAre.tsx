@@ -59,14 +59,15 @@ export default function WhoWeAre() {
             className="relative"
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
-               <Image referrerPolicy="no-referrer"
-                 src="/about-photo/whoweare-photo.png"
-                 alt="Our Team"
-                 fill
-                 className="object-cover"
-                 unoptimized
-               />
-            </div>
+  <video
+    src="/about-photo/whoweare-video.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  />
+</div>
           </motion.div>
 
         </div>
