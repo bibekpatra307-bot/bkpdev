@@ -11,29 +11,29 @@ const team = [
     image: '/bibek-founder-photo.png',
   },
   {
-    name: 'Priya Verma',
+    name: 'Prithvi Raj Munda',
     role: 'Project Manager',
-    image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80',
+    image: '/prithvi-manager-photo.jpg',
   },
   {
-    name: 'Amit Patel',
+    name: 'Bhuban Mohakud',
     role: 'Tech Lead',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+    image: '/bhuban-techlead-photo.png',
   },
   {
     name: 'Sneha Kapoor',
     role: 'UI/UX Designer',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80',
+    image: '/sneha-designer-photo.png',
   },
   {
     name: 'Vikas Singh',
     role: 'Backend Developer',
-    image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80',
+    image: '/vikas-developer-photo.png',
   },
   {
     name: 'Neha Tiwari',
     role: 'QA Engineer',
-    image: 'https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80',
+    image: '/neha-qe-photo.png',
   },
 ];
 
