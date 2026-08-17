@@ -45,33 +45,45 @@ export default function AboutHero() {
             </motion.p>
           </div>
 
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border border-slate-800">
-               <Image referrerPolicy="no-referrer"
-                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
-                 alt="BKP Developers Office"
-                 fill
-                 className="object-cover opacity-60 mix-blend-overlay"
-                 unoptimized
-               />
-               <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0f1c]/90 via-primary-900/40 to-transparent"></div>
-               
-               {/* Logo Overlay */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                 <div className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight flex items-center mb-2 drop-shadow-xl">
-                   <span className="text-primary-500">BKP</span>
-                 </div>
-                 <p className="text-white font-bold text-lg md:text-xl drop-shadow-md">BKP DEVELOPERS</p>
-                 <p className="text-white/80 text-xs md:text-sm drop-shadow-md">Innovate. Develop. Deliver.</p>
-               </div>
-            </div>
-          </motion.div>
+          {/* Right Video */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  className="relative hidden lg:block"
+>
+  <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border border-slate-800">
+
+    {/* Background Video */}
+    <video
+      src="/about-photo/about-hero-video.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+
+    {/* Dark / Blue Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0f1c]/90 via-primary-900/40 to-transparent" />
+
+    {/* Logo Overlay */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+      <div className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight flex items-center mb-2">
+        <span className="text-primary-500">BKP</span>
+      </div>
+
+      <p className="text-white font-bold text-lg md:text-xl">
+        BKP DEVELOPERS
+      </p>
+
+      <p className="text-white/80 text-xs md:text-sm">
+        Innovate. Develop. Deliver.
+      </p>
+    </div>
+
+  </div>
+</motion.div>
 
         </div>
       </div>
