@@ -6,9 +6,9 @@ import { Linkedin, Mail } from 'lucide-react';
 
 const team = [
   {
-    name: 'Rohit Sharma',
+    name: 'Bibek Patra',
     role: 'CEO & Founder',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
+    image: '/bibek-founder-photo.png',
   },
   {
     name: 'Priya Verma',
