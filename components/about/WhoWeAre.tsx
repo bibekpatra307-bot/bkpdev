@@ -60,14 +60,14 @@ export default function WhoWeAre() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
   <video
-    src="/about-photo/whoweare-video.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover"
-  />
-</div>
+  src="/about-photo/whoweare-video.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-full object-cover"
+/>         
+              </div>
           </motion.div>
 
         </div>
