@@ -150,7 +150,7 @@ export default function HeroVisual() {
 
       {/* 5. Technology Core Engine (Foreground/Bottom) */}
       <motion.div 
-        className="relative z-0 mt-auto mb-[-150px] sm:mb-[-100px] h-[300px] w-full max-w-3xl flex justify-center items-center"
+        className="relative z-0 mt-auto mb-[-60px] sm:mb-[-100px] h-[220px] sm:h-[300px] w-full max-w-3xl flex justify-center items-center"
         animate={{ 
           x: mousePosition.x * -0.5,
           y: mousePosition.y * -0.5

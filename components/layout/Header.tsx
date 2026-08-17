@@ -59,7 +59,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-32 h-10">
+            <div className="relative w-24 h-8 md:w-32 md:h-10">
                {/* Replace with actual logo image when available */}
                <div className="text-xl md:text-2xl font-heading font-bold text-primary-900 tracking-tight flex items-center">
                  <span className="text-primary-600">BKP</span>

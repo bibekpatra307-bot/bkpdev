@@ -94,8 +94,6 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
-    --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 0.12);
-    --drop-shadow-xl: 0 9px 7px rgb(0 0 0 / 0.1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -365,8 +363,8 @@
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
-  .bottom-24 {
-    bottom: calc(var(--spacing) * 24);
+  .bottom-20 {
+    bottom: calc(var(--spacing) * 20);
   }
   .bottom-\[-10\%\] {
     bottom: -10%;
@@ -434,14 +432,14 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
   }
   .mt-32 {
     margin-top: calc(var(--spacing) * 32);
@@ -482,8 +480,8 @@
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
   }
-  .mb-\[-150px\] {
-    margin-bottom: -150px;
+  .mb-\[-60px\] {
+    margin-bottom: -60px;
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -605,8 +603,11 @@
   .h-\[60\%\] {
     height: 60%;
   }
-  .h-\[300px\] {
-    height: 300px;
+  .h-\[60vh\] {
+    height: 60vh;
+  }
+  .h-\[220px\] {
+    height: 220px;
   }
   .h-\[500px\] {
     height: 500px;
@@ -620,8 +621,8 @@
   .h-full {
     height: 100%;
   }
-  .max-h-\[70vh\] {
-    max-height: 70vh;
+  .max-h-\[80vh\] {
+    max-height: 80vh;
   }
   .max-h-\[400px\] {
     max-height: 400px;
@@ -713,8 +714,8 @@
   .w-\[60\%\] {
     width: 60%;
   }
-  .w-\[90vw\] {
-    width: 90vw;
+  .w-\[92vw\] {
+    width: 92vw;
   }
   .w-\[500px\] {
     width: 500px;
@@ -1630,11 +1631,14 @@
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
   }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
@@ -1642,14 +1646,8 @@
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
-  .pt-28 {
-    padding-top: calc(var(--spacing) * 28);
-  }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
-  }
-  .pt-\[80px\] {
-    padding-top: 80px;
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
@@ -1666,9 +1664,6 @@
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
   }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
-  }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
@@ -1680,9 +1675,6 @@
   }
   .pb-24 {
     padding-bottom: calc(var(--spacing) * 24);
-  }
-  .pb-32 {
-    padding-bottom: calc(var(--spacing) * 32);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -1912,9 +1904,6 @@
   .opacity-40 {
     opacity: 40%;
   }
-  .opacity-60 {
-    opacity: 60%;
-  }
   .opacity-70 {
     opacity: 70%;
   }
@@ -2066,16 +2055,6 @@
   .drop-shadow-\[0_0_8px_rgba\(59\,130\,246\,0\.1\)\] {
     --tw-drop-shadow-size: drop-shadow(0 0 8px var(--tw-drop-shadow-color, rgba(59,130,246,0.1)));
     --tw-drop-shadow: var(--tw-drop-shadow-size);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-md {
-    --tw-drop-shadow-size: drop-shadow(0 3px 3px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.12)));
-    --tw-drop-shadow: drop-shadow(var(--drop-shadow-md));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .drop-shadow-xl {
-    --tw-drop-shadow-size: drop-shadow(0 9px 7px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.1)));
-    --tw-drop-shadow: drop-shadow(var(--drop-shadow-xl));
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
@@ -2604,6 +2583,16 @@
       height: calc(var(--spacing) * 80);
     }
   }
+  .sm\:h-\[300px\] {
+    @media (width >= 40rem) {
+      height: 300px;
+    }
+  }
+  .sm\:h-\[500px\] {
+    @media (width >= 40rem) {
+      height: 500px;
+    }
+  }
   .sm\:w-10 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 10);
@@ -2669,6 +2658,12 @@
       text-align: left;
     }
   }
+  .sm\:text-3xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
   .sm\:text-4xl {
     @media (width >= 40rem) {
       font-size: var(--text-4xl);
@@ -2702,6 +2697,11 @@
       margin-top: calc(var(--spacing) * 10);
     }
   }
+  .md\:mt-12 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 12);
+    }
+  }
   .md\:mb-4 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 4);
@@ -2732,6 +2732,11 @@
       margin-bottom: calc(var(--spacing) * 16);
     }
   }
+  .md\:h-10 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .md\:h-12 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 12);
@@ -2742,6 +2747,11 @@
       height: calc(var(--spacing) * 96);
     }
   }
+  .md\:min-h-screen {
+    @media (width >= 48rem) {
+      min-height: 100vh;
+    }
+  }
   .md\:w-2\/3 {
     @media (width >= 48rem) {
       width: calc(2/3 * 100%);
@@ -2750,6 +2760,11 @@
   .md\:w-12 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:w-32 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 32);
     }
   }
   .md\:w-96 {
@@ -2918,6 +2933,11 @@
       padding-top: calc(var(--spacing) * 20);
     }
   }
+  .md\:pt-28 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 28);
+    }
+  }
   .md\:pt-32 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 32);
@@ -2926,6 +2946,11 @@
   .md\:pt-48 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 48);
+    }
+  }
+  .md\:pt-\[80px\] {
+    @media (width >= 48rem) {
+      padding-top: 80px;
     }
   }
   .md\:pb-10 {
@@ -3613,6 +3638,98 @@ body {
       --tw-scale-z: 1;
     }
   }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/mobile-compact.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************/
+/* Mobile & Tablet compacting overrides
+   Applied only under 1024px (up to tablet). Desktop (lg+) remains unchanged.
+   Use sparing !important only where necessary to override explicit utility classes.
+*/
+
+@media (max-width: 1023px) {
+  /* Reduce section vertical spacing globally on small screens */
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Prevent huge full-screen sections on mobile */
+  .min-h-screen { min-height: auto !important; }
+
+  /* Responsive typography compression */
+  h1 {
+    font-size: 1.875rem !important; /* ~30px */
+    line-height: 1.08 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  h2 {
+    font-size: 1.25rem !important; /* ~20px */
+    line-height: 1.12 !important;
+  }
+  h3 {
+    font-size: 1.125rem !important; /* ~18px */
+    line-height: 1.15 !important;
+  }
+  p, li, a, span {
+    font-size: 0.95rem !important; /* slightly reduced body */
+    line-height: 1.25 !important;
+  }
+
+  /* Tighten common spacing utilities (best-effort, avoids changing desktop) */
+  .max-w-7xl { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-4, .px-6, .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+  /* Reduce large paddings used across many sections */
+  .py-6, .py-8, .py-10, .py-12, .py-16, .py-20, .py-24 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  /* Reduce hero visuals and overly tall elements */
+  .h-\[300px\], .h-\[400px\] {
+    height: auto !important;
+    max-height: 40vh !important;
+  }
+
+  /* Make images and videos fit and not be taller than viewport */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
+
+  /* Compact buttons and CTAs on mobile */
+  a[class*="px-"] {
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+  }
+  button, input[type="button"], input[type="submit"] {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  }
+
+  /* Compact footer */
+  footer {
+    padding-top: 1rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  /* Reduce size of floating utility buttons (scroll-to-top / chat when possible) */
+  button[aria-label="Scroll to top"] {
+    width: 40px !important;
+    height: 40px !important;
+    bottom: 12px !important;
+    right: 12px !important;
+  }
+
+  /* Prevent accidental horizontal overflow from extremely long elements */
+  * { box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
 }
 
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\

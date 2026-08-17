@@ -1,0 +1,87 @@
+/* Mobile & Tablet compacting overrides
+   Applied only under 1024px (up to tablet). Desktop (lg+) remains unchanged.
+   Use sparing !important only where necessary to override explicit utility classes.
+*/
+
+@media (max-width: 1023px) {
+  /* Reduce section vertical spacing globally on small screens */
+  section {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  /* Prevent huge full-screen sections on mobile */
+  .min-h-screen { min-height: auto !important; }
+
+  /* Responsive typography compression */
+  h1 {
+    font-size: 1.875rem !important; /* ~30px */
+    line-height: 1.08 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  h2 {
+    font-size: 1.25rem !important; /* ~20px */
+    line-height: 1.12 !important;
+  }
+  h3 {
+    font-size: 1.125rem !important; /* ~18px */
+    line-height: 1.15 !important;
+  }
+  p, li, a, span {
+    font-size: 0.95rem !important; /* slightly reduced body */
+    line-height: 1.25 !important;
+  }
+
+  /* Tighten common spacing utilities (best-effort, avoids changing desktop) */
+  .max-w-7xl { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .px-4, .px-6, .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
+
+  /* Reduce large paddings used across many sections */
+  .py-6, .py-8, .py-10, .py-12, .py-16, .py-20, .py-24 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+
+  /* Reduce hero visuals and overly tall elements */
+  .h-\[300px\], .h-\[400px\] {
+    height: auto !important;
+    max-height: 40vh !important;
+  }
+
+  /* Make images and videos fit and not be taller than viewport */
+  img, video {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* Compact buttons and CTAs on mobile */
+  a[class*="px-"] {
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+  }
+  button, input[type="button"], input[type="submit"] {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  }
+
+  /* Compact footer */
+  footer {
+    padding-top: 1rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  /* Reduce size of floating utility buttons (scroll-to-top / chat when possible) */
+  button[aria-label="Scroll to top"] {
+    width: 40px !important;
+    height: 40px !important;
+    bottom: 12px !important;
+    right: 12px !important;
+  }
+
+  /* Prevent accidental horizontal overflow from extremely long elements */
+  * { box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+}
