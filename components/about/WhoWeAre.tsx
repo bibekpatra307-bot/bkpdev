@@ -13,39 +13,25 @@ const stats = [
 
 export default function WhoWeAre() {
   return (
-    <section className="py-6 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-6 md:py-24 relative overflow-hidden isolate">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
+        <div className="flex flex-col gap-8 md:gap-16 items-start">
 
-          {/* Left column: text/content (video background only behind this block) */}
+          {/* Main content: clean, text-focused WHO WE ARE section (video removed) */}
           <div>
-            <div className="relative overflow-hidden mb-6">
-              {/* Video background limited to this block but full-bleed horizontally */}
-              <video
-                src="/about-photo/whoweare-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute left-1/2 -translate-x-1/2 w-screen inset-0 h-full object-cover"
-              />
-              {/* Dark/blue semi-transparent overlay to ensure text readability */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-screen inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900/30" />
-
-              {/* Content above the video */}
-              <div className="relative z-10 py-6 px-4 md:py-8 md:px-6">
-                <p className="text-xs md:text-sm font-bold text-white/90 tracking-wider uppercase mb-3">WHO WE ARE</p>
-                <h2 className="text-2xl md:text-3xl md:text-4xl font-heading font-bold text-white mb-3 md:mb-6 leading-tight">
-                  Your Trusted Digital <br className="hidden sm:block" />
-                  Transformation Partner
+            <div className="mb-8">
+              <div className="max-w-3xl mx-auto px-4 md:px-6 lg:px-8 text-center md:text-left">
+                <p className="text-xs md:text-sm font-semibold text-primary-600 tracking-wider uppercase mb-3">WHO WE ARE</p>
+                <h2 className="text-2xl md:text-3xl font-heading font-semibold text-slate-900 mb-4 leading-tight">
+                  Your Trusted Digital Transformation Partner
                 </h2>
-                <p className="text-sm md:text-base text-white/90 mb-5 md:mb-8 leading-relaxed">
-                  We are a team of passionate developers, designers, and problem solvers who believe in the power of technology to transform businesses and create meaningful experiences. Our goal is to deliver solutions that are not only functional but also impactful, scalable, and future-ready.
+                <p className="text-base md:text-lg text-slate-700 mb-6 leading-relaxed">
+                  We are a team of passionate developers, designers, and problem solvers dedicated to turning ideas into meaningful digital experiences. We combine thoughtful design, modern technology, and strategic thinking to build solutions that help businesses grow, adapt, and succeed in a digital-first world.
                 </p>
               </div>
             </div>
 
-            {/* Statistics area - restore original white/light background and original styles */}
+            {/* Statistics area - preserve original styles and content */}
             <div className="bg-white">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:gap-6">
                 {stats.map((stat, index) => (
@@ -70,17 +56,6 @@ export default function WhoWeAre() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Right-side column (preserve existing content/layout) */}
-          <div className="relative">
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              {/* Keep right-side content intact; previously the video lived here but now it's background for left text area */}
-              <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl bg-white p-4 md:p-6">
-                {/* If there was media or extra content here, it can remain; to avoid removing anything we keep a placeholder that preserves padding/space. */}
-                <div className="text-slate-900">&nbsp;</div>
-              </div>
-            </motion.div>
           </div>
 
         </div>
