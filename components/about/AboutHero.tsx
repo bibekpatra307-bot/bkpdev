@@ -52,20 +52,20 @@ export default function AboutHero() {
   transition={{ duration: 0.7, delay: 0.2 }}
   className="relative w-full"
 >
-  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[4/3] border border-slate-800">
+  <div className="relative overflow-hidden aspect-[16/9] md:aspect-[4/3] lg:aspect-[4/3]">
 
-    {/* Background Video */}
+    {/* Background Video — full-bleed horizontally */}
     <video
       src="/about-photo/about-hero-video.mp4"
       autoPlay
       muted
       loop
       playsInline
-      className="absolute inset-0 w-full h-full object-cover"
+      className="absolute left-1/2 -translate-x-1/2 w-screen inset-0 h-full object-cover"
     />
 
-    {/* Dark / Blue Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-tr from-[#0a0f1c]/90 via-primary-900/40 to-transparent" />
+    {/* Dark / Blue Overlay — match video width */}
+    <div className="absolute left-1/2 -translate-x-1/2 w-screen inset-0 bg-gradient-to-tr from-[#0a0f1c]/90 via-primary-900/40 to-transparent" />
 
     {/* Logo Overlay */}
     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">

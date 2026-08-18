@@ -74,7 +74,7 @@ export default function PricingCards() {
 
   return (
     <div 
-      className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto transition-all duration-700 ${
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch transition-all duration-700 ${
         highlighted ? 'scale-[1.02]' : ''
       }`}
     >
@@ -85,11 +85,11 @@ export default function PricingCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: idx * 0.1, duration: 0.5 }}
-          className={`relative flex flex-col p-4 md:p-8 rounded-2xl md:rounded-3xl border transition-all duration-300 ${
+                    className={`relative flex flex-col h-full min-h-0 p-3 md:p-6 rounded-2xl md:rounded-3xl border transition-all duration-300 ${
             tier.popular 
-              ? 'bg-slate-900 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.15)] md:-translate-y-4' 
-              : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'
-          } ${highlighted && tier.popular ? 'ring-4 ring-blue-500/20 shadow-[0_0_60px_rgba(59,130,246,0.3)]' : ''}`}
+                        ? 'bg-slate-900 border-blue-500 shadow-[0_0_28px_rgba(59,130,246,0.12)] md:-translate-y-3' 
+                        : 'bg-slate-900 border-slate-800 hover:border-slate-700'
+                    } ${highlighted && tier.popular ? 'ring-4 ring-blue-500/20 shadow-[0_0_40px_rgba(59,130,246,0.18)]' : ''}`}
         >
           {tier.popular && (
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-blue-500 text-white text-sm font-semibold rounded-full tracking-wide">
@@ -97,22 +97,22 @@ export default function PricingCards() {
             </div>
           )}
 
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
-            <p className="text-slate-400 text-sm h-10">{tier.description}</p>
+          <div className="mb-6">
+            <h3 className="text-lg md:text-xl font-semibold text-white mb-1">{tier.name}</h3>
+            <p className="text-slate-400 text-sm">{tier.description}</p>
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6">
             <div className="flex items-baseline gap-1">
-              <span className="text-4xl font-extrabold text-white">{tier.price}</span>
+              <span className="text-3xl md:text-4xl font-extrabold text-white">{tier.price}</span>
               {tier.price !== "Custom" && <span className="text-slate-500 font-medium">/project</span>}
             </div>
           </div>
 
-          <ul className="flex-1 space-y-4 mb-8">
+          <ul className="flex-1 space-y-3 mb-6">
             {tier.features.map((feature, fIdx) => (
               <li key={fIdx} className="flex items-start gap-3">
-                <Check className={`w-5 h-5 shrink-0 ${tier.popular ? 'text-blue-400' : 'text-slate-500'}`} />
+                <Check className={`w-4 h-4 shrink-0 ${tier.popular ? 'text-blue-400' : 'text-slate-500'}`} />
                 <span className="text-slate-300 text-sm">{feature}</span>
               </li>
             ))}
@@ -120,9 +120,9 @@ export default function PricingCards() {
 
           <button 
             onClick={() => router.push('/contact')}
-            className={`w-full py-3.5 rounded-xl font-medium transition-colors ${
+            className={`w-full py-2.5 md:py-3 rounded-lg md:rounded-xl font-medium transition-colors ${
               tier.popular
-                ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-900/20'
+                ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md'
                 : 'bg-slate-800 hover:bg-slate-700 text-white'
             }`}
           >

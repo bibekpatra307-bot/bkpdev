@@ -4,11 +4,23 @@ import { motion } from 'motion/react';
 
 export default function BlogHero() {
   return (
-    <section className="relative pt-16 md:pt-32 pb-10 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-[#0a0f1c]">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary-900/20 blur-[120px] pointer-events-none"></div>
+    <section className="relative isolate pt-16 md:pt-32 pb-10 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+      {/* Background video (full-bleed inside hero) */}
+      <video
+        src="/news-media-video/news-media-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 z-0 w-full h-full object-cover"
+      />
+      {/* Dark overlay to ensure readability */}
+      <div className="absolute inset-0 z-10 bg-black/60" aria-hidden />
 
-      <div className="max-w-4xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] z-5 pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary-900/20 blur-[120px] pointer-events-none z-5"></div>
+
+      <div className="max-w-4xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

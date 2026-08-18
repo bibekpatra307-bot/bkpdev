@@ -20,12 +20,28 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-[#0a0a0e] text-slate-50 pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">World-Class Services</h1>
-          <p className="text-xl text-slate-400">Discover our comprehensive suite of digital solutions engineered for growth, performance, and scale.</p>
-        </div>
+      {/* Hero section — full-width controlled section so video cannot escape */}
+      <section className="relative isolate overflow-hidden mb-20 pt-0">
+        {/* Background video (absolute, inset-0, covers section) */}
+        <video
+          src="/about-photo/about-hero-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 inset-0 z-0 w-full h-full object-cover"
+          aria-hidden
+        />
+        {/* Dark overlay */}
+        <div className="absolute top-0 left-0 inset-0 z-10 bg-black/60" aria-hidden />
 
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28 lg:py-32 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">World-Class Services</h1>
+          <p className="text-xl text-slate-200">Discover our comprehensive suite of digital solutions engineered for growth, performance, and scale.</p>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="space-y-24">
           {Object.entries(groupedServices).map(([category, services]: [string, any]) => (
             <div key={category}>

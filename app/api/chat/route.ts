@@ -5,6 +5,12 @@ export async function POST(req: NextRequest) {
   try {
     const { messages } = await req.json();
 
+    // Ensure the Gemini API key is configured server-side. Do not expose the key in logs or responses.
+    if (!process.env.GEMINI_API_KEY) {
+      console.error('chat API: GEMINI_API_KEY is not set in environment');
+      return NextResponse.json({ error: 'Server misconfiguration: GEMINI_API_KEY is not set' }, { status: 500 });
+    }
+
     const ai = new GoogleGenAI({ 
       apiKey: process.env.GEMINI_API_KEY,
       httpOptions: {
@@ -29,7 +35,8 @@ export async function POST(req: NextRequest) {
     
     const latestMessage = messages[messages.length - 1].content;
 
-    const chat = ai.chats.create({
+    // Create the chat session (await the creation - create() returns a Promise)
+    const chat = await ai.chats.create({
       model: "gemini-3.5-flash",
       config: {
         systemInstruction,
@@ -37,11 +44,29 @@ export async function POST(req: NextRequest) {
       history: history.length > 0 ? history : undefined,
     });
 
+    // Send the latest user message and await the provider response
     const response = await chat.sendMessage({ message: latestMessage });
 
-    return NextResponse.json({ reply: response.text });
-  } catch (error) {
-    console.error("Error in chat API:", error);
+    // Extract reply text robustly. Prefer response.text but fall back safely.
+    const replyText = response?.text ?? null;
+
+    if (!replyText) {
+      // If the provider returned an unexpected shape, include a helpful log for debugging.
+      console.error('chat API: unexpected provider response shape', { shape: Object.keys(response || {}) });
+      return NextResponse.json({ error: 'Unexpected response from AI provider' }, { status: 500 });
+    }
+
+    return NextResponse.json({ reply: replyText });
+  } catch (error: any) {
+    // Log safe, useful debugging info without revealing API keys or secrets
+    console.error('Error in chat API:', {
+      message: error?.message ?? String(error),
+      name: error?.name,
+      // If the provider error includes an HTTP status or body, log those fields only (truncated)
+      providerStatus: error?.response?.status ?? error?.statusCode ?? null,
+      providerMessage: error?.response?.data ? String(error.response.data).slice(0, 1000) : undefined,
+    });
+
     return NextResponse.json({ error: "Failed to process chat" }, { status: 500 });
   }
 }
