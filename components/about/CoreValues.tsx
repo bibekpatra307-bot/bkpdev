@@ -5,27 +5,27 @@ import { Lightbulb, ShieldCheck, Users, Award, TrendingUp } from 'lucide-react';
 
 const values = [
   {
-    icon: <Lightbulb className="w-8 h-8" />,
+    icon: <Lightbulb className="w-6 h-6 md:w-8 md:h-8" />,
     title: 'Innovation',
     description: 'We embrace new ideas and technologies to deliver creative and effective solutions.',
   },
   {
-    icon: <ShieldCheck className="w-8 h-8" />,
+    icon: <ShieldCheck className="w-6 h-6 md:w-8 md:h-8" />,
     title: 'Integrity',
     description: 'We believe in transparency, honesty, and ethical practices in everything we do.',
   },
   {
-    icon: <Users className="w-8 h-8" />,
+    icon: <Users className="w-6 h-6 md:w-8 md:h-8" />,
     title: 'Collaboration',
     description: 'We work closely with our clients and each other to achieve shared success.',
   },
   {
-    icon: <Award className="w-8 h-8" />,
+    icon: <Award className="w-6 h-6 md:w-8 md:h-8" />,
     title: 'Quality',
     description: 'We maintain high standards in our work to ensure the best outcomes.',
   },
   {
-    icon: <TrendingUp className="w-8 h-8" />,
+    icon: <TrendingUp className="w-6 h-6 md:w-8 md:h-8" />,
     title: 'Growth',
     description: 'We are committed to continuous learning and growing together.',
   },
@@ -33,7 +33,7 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="py-12 md:py-24 bg-white">
+    <section className="py-6 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-8 md:mb-16">

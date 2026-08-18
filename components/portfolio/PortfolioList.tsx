@@ -25,7 +25,7 @@ export default function PortfolioList() {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section className="py-12 md:py-24 bg-white min-h-screen">
+    <section className="py-6 md:py-24 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         {/* Filters */}

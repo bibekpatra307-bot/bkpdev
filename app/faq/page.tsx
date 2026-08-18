@@ -38,7 +38,7 @@ export default function FAQPage() {
         badge="FAQS" 
         description="Find answers to common questions about our services, processes, and more."
       />
-      <section className="py-12 md:py-24 bg-white relative -mt-10">
+      <section className="py-6 md:py-24 bg-white relative -mt-10">
         <div className="max-w-3xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (

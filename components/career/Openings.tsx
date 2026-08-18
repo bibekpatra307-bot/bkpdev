@@ -41,7 +41,7 @@ const jobs = [
 
 export default function Openings() {
   return (
-    <section className="py-12 md:py-24 bg-white relative -mt-10">
+    <section className="py-6 md:py-24 bg-white relative -mt-10">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-8 md:mb-16">
@@ -61,7 +61,7 @@ export default function Openings() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-slate-50 border border-slate-100 rounded-3xl p-4 md:p-8 hover:shadow-xl transition-all duration-300"
+              className="group bg-slate-50 border border-slate-100 rounded-3xl p-3 md:p-8 hover:shadow-xl transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-2 md:mb-4">
                 <div>

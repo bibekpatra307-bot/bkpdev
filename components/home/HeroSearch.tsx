@@ -249,7 +249,7 @@ export default function HeroSearch() {
                   </ul>
                 ) : (
                   <div className="py-12 px-6 text-center flex flex-col items-center">
-                    <Search className="w-8 h-8 text-slate-600 mb-3" />
+                    <Search className="w-6 h-6 md:w-8 md:h-8 text-slate-600 mb-3" />
                     <p className="text-slate-300 font-medium text-lg mb-1">No services found</p>
                     <p className="text-slate-500 text-sm mb-6">We couldn't find anything matching "{query}"</p>
                     <button 

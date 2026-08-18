@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="py-12 md:py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-6 md:py-24 bg-slate-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           

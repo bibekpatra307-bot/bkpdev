@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <PageHeader title="Privacy Policy" badge="LEGAL" />
-      <section className="py-12 md:py-24 bg-white relative -mt-10">
+      <section className="py-6 md:py-24 bg-white relative -mt-10">
         <div className="max-w-3xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 text-slate-600 leading-relaxed space-y-6">
           <p className="text-xs md:text-sm font-medium">Last updated: October 2023</p>
           

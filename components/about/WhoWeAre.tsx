@@ -5,15 +5,15 @@ import Image from 'next/image';
 import { Users, Briefcase, Calendar, Star } from 'lucide-react';
 
 const stats = [
-  { icon: <Users className="w-8 h-8" />, value: '100+', label: 'Happy Clients' },
-  { icon: <Briefcase className="w-8 h-8" />, value: '250+', label: 'Projects Completed' },
-  { icon: <Calendar className="w-8 h-8" />, value: '4+', label: 'Years Experience' },
-  { icon: <Star className="w-8 h-8" />, value: '95%', label: 'Client Satisfaction' },
+  { icon: <Users className="w-6 h-6 md:w-8 md:h-8" />, value: '100+', label: 'Happy Clients' },
+  { icon: <Briefcase className="w-6 h-6 md:w-8 md:h-8" />, value: '250+', label: 'Projects Completed' },
+  { icon: <Calendar className="w-6 h-6 md:w-8 md:h-8" />, value: '4+', label: 'Years Experience' },
+  { icon: <Star className="w-6 h-6 md:w-8 md:h-8" />, value: '95%', label: 'Client Satisfaction' },
 ];
 
 export default function WhoWeAre() {
   return (
-    <section className="py-12 md:py-24 bg-white relative overflow-hidden">
+    <section className="py-6 md:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           

@@ -176,7 +176,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl p-4 md:p-8 lg:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 relative z-10"
+            className="bg-white rounded-3xl p-3 md:p-8 lg:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 relative z-10"
           >
             <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 md:mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">

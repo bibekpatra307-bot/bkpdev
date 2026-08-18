@@ -13,7 +13,7 @@ export default function CTA() {
 
           <div className="flex items-start gap-3 md:gap-6 relative z-10 md:w-2/3">
             <div className="hidden sm:flex shrink-0 w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl items-center justify-center border border-white/20">
-              <Send className="w-8 h-8 text-white" />
+              <Send className="w-6 h-6 md:w-8 md:h-8 text-white" />
             </div>
             <div>
               <h2 className="text-2xl md:text-3xl md:text-4xl font-heading font-bold text-white mb-2 md:mb-4">
