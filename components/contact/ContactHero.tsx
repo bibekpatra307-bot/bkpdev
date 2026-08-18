@@ -7,7 +7,7 @@ export default function ContactHero() {
     <section className="relative isolate pt-16 md:pt-32 pb-10 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       {/* Background video */}
       <video
-        src="/contact-page-videohg/contact-us-video.mp4"
+        src="/contact-page-video/contact-us-video.mp4"
         autoPlay
         muted
         loop
