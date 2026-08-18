@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 const TIERS = [
   {
     name: "Starter",
-    price: "$999",
+    price: "999",
     description: "Perfect for startups and small businesses looking to establish a digital presence.",
     features: [
       "Responsive Website (Up to 5 Pages)",
@@ -22,7 +22,7 @@ const TIERS = [
   },
   {
     name: "Professional",
-    price: "$2,499",
+    price: "2,499",
     description: "Comprehensive solutions for growing businesses needing advanced functionality.",
     features: [
       "Custom Web Application",
@@ -47,7 +47,7 @@ const TIERS = [
       "Dedicated Project Manager",
       "24/7 Priority Support"
     ],
-    buttonText: "Contact Sales",
+    buttonText: "Contact us",
     popular: false
   }
 ];
