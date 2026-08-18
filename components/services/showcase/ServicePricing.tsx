@@ -8,7 +8,7 @@ export default function ServicePricing({ serviceName }: { serviceName: string })
   const plans = [
     {
       name: "Basic",
-      price: "999",
+      price: "₹999",
       delivery: "1-2 Weeks",
       desc: `Perfect starting point for your ${serviceName} needs.`,
       features: ["Standard Design", "Core Functionality", "Responsive Layout", "Basic SEO", "1 Month Support"],
@@ -16,7 +16,7 @@ export default function ServicePricing({ serviceName }: { serviceName: string })
     },
     {
       name: "Professional",
-      price: "2,499",
+      price: "₹2,499",
       delivery: "3-4 Weeks",
       desc: "Advanced features and premium design for growing businesses.",
       features: ["Premium Custom Design", "Advanced Functionality", "CMS Integration", "Analytics Setup", "3 Months Support"],
