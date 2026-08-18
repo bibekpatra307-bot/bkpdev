@@ -59,7 +59,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] group">
+            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[4/3] group">
                {/* Using placeholder until actual image is available */}
                <Image referrerPolicy="no-referrer"
                  src="/bkp-office-about.png"
@@ -72,7 +72,7 @@ export default function About() {
                
                {/* Logo Overlay */}
                <div className="absolute bottom-8 left-8 flex items-center gap-3">
-                 <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                 <div className="w-12 h-12 md:w-14 md:h-14 bg-white rounded-lg md:rounded-xl flex items-center justify-center shadow-lg">
                    <span className="text-lg md:text-xl font-bold text-primary-600">BKP</span>
                  </div>
                  <div>

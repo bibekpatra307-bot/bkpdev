@@ -85,7 +85,7 @@ export default function PricingCards() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: idx * 0.1, duration: 0.5 }}
-          className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 ${
+          className={`relative flex flex-col p-4 md:p-8 rounded-2xl md:rounded-3xl border transition-all duration-300 ${
             tier.popular 
               ? 'bg-slate-900 border-blue-500 shadow-[0_0_40px_rgba(59,130,246,0.15)] md:-translate-y-4' 
               : 'bg-slate-900/50 border-slate-800 hover:border-slate-700'

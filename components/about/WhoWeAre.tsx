@@ -58,7 +58,7 @@ export default function WhoWeAre() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[4/3]">
   <video
   src="/about-photo/whoweare-video.mp4"
   autoPlay

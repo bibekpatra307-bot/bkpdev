@@ -74,9 +74,9 @@ export default function LivePreviewGallery({ category, serviceName }: { category
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               onMouseEnter={() => setHoveredIdx(idx)}
               onMouseLeave={() => setHoveredIdx(null)}
-              className="group relative rounded-3xl overflow-hidden bg-slate-900 border border-slate-800"
+              className="group relative rounded-2xl md:rounded-3xl overflow-hidden bg-slate-900 border border-slate-800"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] md:aspect-[4/3] w-full overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}

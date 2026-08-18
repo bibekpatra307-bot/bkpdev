@@ -56,9 +56,9 @@ export default function PortfolioList() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group relative rounded-3xl overflow-hidden bg-slate-50 border border-slate-100"
+                className="group relative rounded-2xl md:rounded-3xl overflow-hidden bg-slate-50 border border-slate-100"
               >
-                <a href={project.url} target="_blank" rel="noopener noreferrer" className="block relative aspect-[4/3] overflow-hidden">
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="block relative aspect-[16/9] md:aspect-[4/3] overflow-hidden">
                   <Image referrerPolicy="no-referrer"
                     src={project.image}
                     alt={project.title}

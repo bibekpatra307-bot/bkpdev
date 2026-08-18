@@ -61,7 +61,7 @@ export default function Openings() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-slate-50 border border-slate-100 rounded-3xl p-3 md:p-8 hover:shadow-xl transition-all duration-300"
+              className="group bg-slate-50 border border-slate-100 rounded-2xl md:rounded-3xl p-3 md:p-8 hover:shadow-xl transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-2 md:mb-4">
                 <div>

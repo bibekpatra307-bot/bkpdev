@@ -42,7 +42,7 @@ export default function FAQPage() {
         <div className="max-w-3xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-slate-50 rounded-2xl p-3 md:p-6 md:p-8 border border-slate-100 shadow-sm">
+              <div key={index} className="bg-slate-50 rounded-2xl p-3 md:p-6 border border-slate-100 shadow-sm">
                 <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3">{faq.question}</h3>
                 <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>

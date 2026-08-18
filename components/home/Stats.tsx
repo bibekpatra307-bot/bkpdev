@@ -30,7 +30,7 @@ export default function Stats() {
   return (
     <section className="py-4 md:py-12 bg-white">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#0a0f1c] rounded-3xl p-3 md:p-8 shadow-2xl overflow-hidden relative">
+        <div className="bg-[#0a0f1c] rounded-2xl md:rounded-3xl p-3 md:p-8 shadow-2xl overflow-hidden relative">
           
           {/* Background Elements */}
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-900/50 to-transparent pointer-events-none"></div>

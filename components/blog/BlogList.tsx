@@ -75,9 +75,9 @@ export default function BlogList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300"
+              className="group bg-white rounded-2xl md:rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+              <div className="relative aspect-[16/9] md:aspect-[4/3] overflow-hidden bg-slate-100">
                 <Image referrerPolicy="no-referrer"
                   src={post.image}
                   alt={post.title}
@@ -92,7 +92,7 @@ export default function BlogList() {
                 </div>
               </div>
               
-              <div className="p-3 md:p-6 md:p-8">
+              <div className="p-3 md:p-6">
                 <div className="flex items-center gap-2 md:gap-4 text-slate-500 text-xs md:text-sm mb-2 md:mb-4">
                   <div className="flex items-center gap-1.5">
                     <User className="w-4 h-4" />

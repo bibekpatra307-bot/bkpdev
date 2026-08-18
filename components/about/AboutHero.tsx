@@ -50,9 +50,9 @@ export default function AboutHero() {
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.7, delay: 0.2 }}
-  className="relative hidden lg:block"
+  className="relative w-full"
 >
-  <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border border-slate-800">
+  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[4/3] lg:aspect-[4/3] border border-slate-800">
 
     {/* Background Video */}
     <video
@@ -69,15 +69,15 @@ export default function AboutHero() {
 
     {/* Logo Overlay */}
     <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-      <div className="text-4xl md:text-5xl font-heading font-bold text-white tracking-tight flex items-center mb-2">
+      <div className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white tracking-tight flex items-center mb-2">
         <span className="text-primary-500">BKP</span>
       </div>
 
-      <p className="text-white font-bold text-lg md:text-xl">
+      <p className="text-white font-bold text-sm md:text-lg">
         BKP DEVELOPERS
       </p>
 
-      <p className="text-white/80 text-xs md:text-sm">
+      <p className="text-white/80 text-[11px] md:text-sm">
         Innovate. Develop. Deliver.
       </p>
     </div>

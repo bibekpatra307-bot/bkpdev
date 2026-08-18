@@ -20,11 +20,10 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl p-5 md:p-10 shadow-lg border border-slate-100 flex flex-col sm:flex-row gap-3 md:gap-6 items-start"
-          >
-             <div className="w-16 h-16 shrink-0 rounded-full bg-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-600/30">
-               <Target className="w-8 h-8" />
-             </div>
+            className="bg-white rounded-2xl p-3 md:p-10 shadow-lg border border-slate-100 flex flex-col sm:flex-row gap-2 md:gap-6 items-start">
+            <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-600/30">
+              <Target className="w-6 h-6 md:w-8 md:h-8" />
+            </div>
              <div>
                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4">Our Mission</h3>
                <div className="w-12 h-1 bg-primary-600 rounded-full mb-3 md:mb-6"></div>
@@ -40,10 +39,9 @@ export default function MissionVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-white rounded-3xl p-5 md:p-10 shadow-lg border border-slate-100 flex flex-col sm:flex-row gap-3 md:gap-6 items-start"
-          >
-             <div className="w-16 h-16 shrink-0 rounded-full bg-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-600/30">
-               <Eye className="w-8 h-8" />
+            className="bg-white rounded-2xl p-3 md:p-10 shadow-lg border border-slate-100 flex flex-col sm:flex-row gap-2 md:gap-6 items-start">
+             <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-primary-600 flex items-center justify-center text-white shadow-lg shadow-primary-600/30">
+               <Eye className="w-6 h-6 md:w-8 md:h-8" />
              </div>
              <div>
                <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 md:mb-4">Our Vision</h3>

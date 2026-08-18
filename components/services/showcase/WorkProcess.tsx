@@ -28,7 +28,7 @@ export default function WorkProcess() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="relative p-8 rounded-3xl bg-slate-900 border border-slate-800"
+              className="relative p-4 md:p-8 rounded-2xl md:rounded-3xl bg-slate-900 border border-slate-800"
             >
               <div className="text-6xl font-extrabold text-slate-800/50 mb-4 absolute top-6 right-6 select-none">{step.num}</div>
               <div className="relative z-10">

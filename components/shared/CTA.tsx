@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section className="py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-primary-900 to-primary-700 rounded-3xl p-5 md:p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-primary-900 to-primary-700 rounded-3xl p-3 md:p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 relative overflow-hidden">
           
           {/* Background Decorative Elements */}
           <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>

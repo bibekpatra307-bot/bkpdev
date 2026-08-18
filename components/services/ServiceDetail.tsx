@@ -73,7 +73,7 @@ export default function ServiceDetail({ title, description, icon, features, imag
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-white border border-slate-200 p-2">
+            <div className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[4/3] bg-white border border-slate-200 p-2">
                <div className="relative w-full h-full rounded-2xl overflow-hidden">
                  <Image referrerPolicy="no-referrer"
                    src={image}
