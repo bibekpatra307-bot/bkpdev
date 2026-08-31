@@ -3930,6 +3930,11 @@ body {
     gap: 0.3rem !important;
   }
 
+  .bkp-header-inner nav > div:first-child {
+    margin-left: 0.75rem;
+    min-width: 2.5rem;
+  }
+
   .bkp-header-inner nav a {
     gap: 0.1rem;
     font-size: 0.625rem;
