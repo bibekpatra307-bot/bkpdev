@@ -7,18 +7,18 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="bg-slate-50 relative overflow-hidden py-[clamp(2.5rem,6vw,6rem)]">
-      <div className="max-w-7xl mx-auto px-[clamp(1rem,2vw,2rem)] relative z-10">
+    <section className="py-6 md:py-24 bg-slate-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
-           
+          
           {/* Left Content */}
           <div>
-            <p className="text-[clamp(0.7rem,1vw,0.875rem)] font-bold text-primary-600 tracking-[0.18em] uppercase mb-3">About Us</p>
-            <h2 className="text-[clamp(1.8rem,3vw,3rem)] font-heading font-bold text-slate-900 mb-3 md:mb-6 leading-tight">
+            <p className="text-xs md:text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">About Us</p>
+            <h2 className="text-2xl md:text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-3 md:mb-6 leading-tight">
               Building The Future <br />
               <span className="text-primary-600">With Technology</span>
             </h2>
-            <p className="text-[clamp(0.95rem,1.8vw,1.125rem)] text-slate-600 mb-4 md:mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-slate-600 mb-4 md:mb-8 leading-relaxed">
               BKP Developers is a leading software development company delivering innovative, reliable and high-quality digital solutions. We transform ideas into powerful digital products that drive growth and success.
             </p>
 

@@ -28,20 +28,20 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="bg-white relative py-[clamp(2.5rem,6vw,6rem)]">
-      <div className="max-w-7xl mx-auto px-[clamp(1rem,2vw,2rem)]">
-         
+    <section className="py-6 md:py-24 bg-white relative">
+      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 md:gap-6 mb-[clamp(1rem,3vw,3rem)]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 md:gap-6 mb-4 md:mb-12">
           <div>
-            <p className="text-[clamp(0.7rem,1vw,0.875rem)] font-bold text-primary-600 tracking-[0.18em] uppercase mb-3">Our Work</p>
-            <h2 className="text-[clamp(1.75rem,3vw,3rem)] font-heading font-bold text-slate-900">
+            <p className="text-xs md:text-sm font-bold text-primary-600 tracking-wider uppercase mb-3">Our Work</p>
+            <h2 className="text-xl md:text-3xl lg:text-4xl font-heading font-bold text-slate-900">
               Featured Projects
             </h2>
           </div>
           <Link 
             href="/portfolio" 
-            className="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors group text-[clamp(0.85rem,1.6vw,1rem)]"
+            className="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors group"
           >
             View All Projects
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -49,7 +49,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[clamp(0.9rem,2vw,2rem)]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -60,7 +60,7 @@ export default function Projects() {
               className="group"
             >
               <Link href={project.path} target="_blank" rel="noopener noreferrer" className="block">
-                <div className="relative rounded-2xl overflow-hidden mb-[clamp(0.75rem,2vw,1.5rem)] aspect-[16/9] md:aspect-[4/3] bg-slate-100">
+                <div className="relative rounded-2xl overflow-hidden mb-3 md:mb-6 aspect-[16/9] md:aspect-[4/3] bg-slate-100">
                   <Image referrerPolicy="no-referrer"
                     src={project.image}
                     alt={project.title}
@@ -71,14 +71,14 @@ export default function Projects() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-primary-900/0 group-hover:bg-primary-900/20 transition-colors duration-300"></div>
                 </div>
-                 
-                <h3 className="text-[clamp(1.1rem,2vw,1.5rem)] font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">
+                
+                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-[clamp(0.9rem,1.5vw,1rem)] text-slate-500 mb-2 md:mb-4">
+                <p className="text-slate-500 mb-2 md:mb-4">
                   {project.category}
                 </p>
-                <div className="flex items-center text-primary-600 font-medium text-[clamp(0.7rem,1vw,0.875rem)]">
+                <div className="flex items-center text-primary-600 font-medium text-xs md:text-sm">
                   View Live Project
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>

@@ -166,7 +166,7 @@ export default function HeroSearch() {
         layout
         className={`relative flex items-center bg-slate-900/60 backdrop-blur-2xl border transition-all duration-300 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] ${isFocused ? 'border-blue-500/50 ring-4 ring-blue-500/10' : 'border-slate-800'}`}
       >
-        <div className={`flex items-center justify-center pl-[clamp(0.9rem,2vw,1.5rem)] transition-colors duration-300 ${isFocused ? 'text-blue-400' : 'text-slate-500'}`}>
+        <div className={`flex items-center justify-center pl-6 transition-colors duration-300 ${isFocused ? 'text-blue-400' : 'text-slate-500'}`}>
           <Search className="w-5 h-5" />
         </div>
         
@@ -178,7 +178,7 @@ export default function HeroSearch() {
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
           placeholder="Search for AI, Cloud, Web, Mobile..."
-          className="flex-1 bg-transparent border-none outline-none text-slate-100 placeholder:text-slate-500 text-[clamp(0.9rem,1.8vw,1.125rem)] w-full px-4 py-[clamp(0.8rem,1.6vw,1.25rem)]"
+          className="flex-1 bg-transparent border-none outline-none text-slate-100 placeholder:text-slate-500 text-lg w-full px-4 py-5"
           aria-label="Search services"
           spellCheck="false"
         />
