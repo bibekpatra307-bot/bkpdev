@@ -35,7 +35,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1] sm:leading-[1.1] md:leading-[1.1] lg:leading-[1.1]"
+            className="max-w-4xl mx-auto font-extrabold tracking-[-0.04em] text-white leading-[0.96] text-[clamp(2.5rem,5vw,5.5rem)]"
           >
             We build digital solutions that drive real business growth.
           </motion.h1>
@@ -45,7 +45,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-4 text-sm md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed"
+            className="mt-4 text-[clamp(0.95rem,1.8vw,1.125rem)] text-slate-400 max-w-2xl mx-auto leading-relaxed"
           >
             BKP Developers engineers premium Websites, Mobile Apps, AI Solutions, Cloud Infrastructure, and Automation Systems tailored for scale and performance.
           </motion.p>
