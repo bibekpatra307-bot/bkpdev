@@ -34,14 +34,66 @@
   .animate-scroll-right {
     animation: none !important;
   }
+}
 
-  @media (max-width: 767px) {
-    .bkp-header-inner {
-      gap: 1rem !important;
-    }
+@media (max-width: 767px) {
+  .bkp-header-inner {
+    gap: 0.5rem !important;
+  }
 
-    .bkp-header-inner > a:first-child {
-      margin-right: 0.5rem;
-    }
+  .bkp-header-inner > a:first-child {
+    margin-right: 0.25rem;
+  }
+
+  .bkp-header-inner > div:last-child {
+    padding-left: 0.25rem;
+    gap: 0.35rem !important;
+  }
+
+  .bkp-header-inner [data-logo] {
+    width: 4.75rem;
+  }
+
+  .bkp-header-inner [data-logo] > div {
+    font-size: 0.95rem;
+  }
+
+  .bkp-header-inner [data-logo] > div > span:last-child {
+    font-size: 0.65rem;
+  }
+
+  .bkp-header-inner nav {
+    gap: 0.3rem !important;
+  }
+
+  .bkp-header-inner nav a {
+    gap: 0.1rem;
+    font-size: 0.625rem;
+  }
+
+  .bkp-header-inner nav a svg {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+
+  .bkp-header-inner .bkp-header-cta a {
+    gap: 0.15rem;
+    padding: 0.35rem 0.4rem;
+    font-size: 0.55rem;
+  }
+
+  .bkp-header-inner .bkp-header-cta svg {
+    height: 0.7rem;
+    width: 0.7rem;
+  }
+
+  .bkp-header-inner button[aria-label='More navigation'] {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  .bkp-header-inner button[aria-label='More navigation'] svg {
+    height: 0.9rem;
+    width: 0.9rem;
   }
 }

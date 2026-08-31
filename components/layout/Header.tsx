@@ -28,9 +28,17 @@ const navLinks = [
   { name: 'Contact', path: '/contact' },
 ];
 
+const mobileNavLinks = [
+  navLinks[0],
+  navLinks[2],
+  navLinks[1],
+  navLinks[6],
+];
+
 export default function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [visibleCount, setVisibleCount] = useState(navLinks.length);
   const [showOverflowButton, setShowOverflowButton] = useState(false);
   const [isOverflowOpen, setIsOverflowOpen] = useState(false);
@@ -58,11 +66,22 @@ export default function Header() {
       const width = window.innerWidth;
 
       if (width >= 1024) {
+        setIsMobile(false);
         setVisibleCount(navLinks.length);
         setShowOverflowButton(false);
         setShowCta(true);
         return;
       }
+
+      if (width < 768) {
+        setIsMobile(true);
+        setVisibleCount(mobileNavLinks.length);
+        setShowOverflowButton(true);
+        setShowCta(true);
+        return;
+      }
+
+      setIsMobile(false);
 
       const headerWidth = headerRef.current?.clientWidth ?? 0;
       const logoElement = headerRef.current?.querySelector('[data-logo]') as HTMLElement | null;
@@ -289,7 +308,10 @@ export default function Header() {
     );
   };
 
-  const overflowItems = navLinks.slice(visibleCount);
+  const displayedLinks = isMobile ? mobileNavLinks : navLinks.slice(0, visibleCount);
+  const overflowItems = isMobile
+    ? navLinks.filter((link) => !mobileNavLinks.some((mobileLink) => mobileLink.name === link.name))
+    : navLinks.slice(visibleCount);
 
   return (
     <header
@@ -310,11 +332,11 @@ export default function Header() {
 
           <div className="ml-auto flex shrink-0 items-center justify-end gap-3">
             <nav className="flex shrink-0 items-center gap-[18px]">
-              {navLinks.slice(0, visibleCount).map((link, index) => renderNavItem(link, index))}
+              {displayedLinks.map((link, index) => renderNavItem(link, index))}
             </nav>
 
             {showCta && (
-              <div ref={ctaRef} className="shrink-0">
+              <div ref={ctaRef} className="bkp-header-cta shrink-0">
                 <Link
                  href="/contact"
                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 px-3 py-2.5 text-xs font-medium text-white shadow-sm shadow-primary-600/20 transition-colors hover:bg-primary-700 md:px-6 md:text-sm"
