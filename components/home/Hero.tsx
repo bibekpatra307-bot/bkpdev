@@ -32,7 +32,7 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mx-auto mt-2 max-w-xl text-sm font-medium leading-7 tracking-wide text-slate-300 md:text-base md:leading-8"
           >
-            BKP Developers engineers premium Websites, Mobile Apps, AI Solutions, Cloud Infrastructure, and Automation Systems tailored for scale and performance.
+            BKP Developers is a leading software development company delivering innovative, reliable and high-quality digital solutions.
           </motion.p>
         </motion.div>
       </div>
