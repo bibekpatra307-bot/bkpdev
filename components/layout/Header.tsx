@@ -298,7 +298,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-3 md:px-4 sm:px-6 lg:px-8">
-        <div ref={headerRef} className="flex items-center justify-between gap-3">
+        <div ref={headerRef} className="bkp-header-inner flex items-center justify-between gap-3">
           <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="BKP Developers home">
             <div data-logo className="relative h-8 w-24 md:h-10 md:w-32">
               <div className="flex items-center text-xl font-heading font-bold tracking-tight text-primary-900 md:text-2xl">

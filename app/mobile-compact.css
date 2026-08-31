@@ -34,4 +34,14 @@
   .animate-scroll-right {
     animation: none !important;
   }
+
+  @media (max-width: 767px) {
+    .bkp-header-inner {
+      gap: 1rem !important;
+    }
+
+    .bkp-header-inner > a:first-child {
+      margin-right: 0.5rem;
+    }
+  }
 }

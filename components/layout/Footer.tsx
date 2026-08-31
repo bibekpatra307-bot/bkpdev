@@ -1,36 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin, Clock, ArrowUp } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useEffect, useState } from 'react';
 
 export default function Footer() {
-  const [showScroll, setShowScroll] = useState(false);
-
-  useEffect(() => {
-    const checkScrollTop = () => {
-      if (!showScroll && window.scrollY > 400) {
-        setShowScroll(true);
-      } else if (showScroll && window.scrollY <= 400) {
-        setShowScroll(false);
-      }
-    };
-    window.addEventListener('scroll', checkScrollTop);
-    return () => window.removeEventListener('scroll', checkScrollTop);
-  }, [showScroll]);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-[#0a0f1c] text-slate-300 pt-6 md:pt-20 pb-4 md:pb-10 border-t border-slate-800 relative">
-      <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-8 mb-8 md:mb-16">
+    <footer className="relative border-t border-slate-800 bg-[#0a0f1c] pb-4 pt-8 text-slate-300 md:pb-8 md:pt-12">
+      <div className="max-w-7xl mx-auto px-3 md:px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-7 md:grid-cols-3 md:gap-10 lg:gap-8 mb-8 md:mb-12">
           
           {/* Company Info */}
-          <div className="space-y-6">
+          <div className="col-span-2 space-y-4 md:col-span-1 md:space-y-5">
             <Link href="/" className="inline-block">
                <div className="text-xl md:text-2xl font-heading font-bold tracking-tight flex items-center">
                  <span className="text-primary-500">BKP</span>
@@ -38,10 +19,7 @@ export default function Footer() {
                </div>
                <p className="text-[10px] md:text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Innovate. Develop. Deliver.</p>
             </Link>
-            <p className="text-xs md:text-sm text-slate-400 leading-relaxed">
-              BKP Developers is a leading software development company delivering innovative, reliable and high-quality digital solutions.
-            </p>
-            <div className="flex gap-2 md:gap-4">
+            <div className="flex gap-2 md:gap-3">
               <a href="#" className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-400 hover:bg-primary-600 hover:text-white transition-all duration-300">
                 <Facebook className="w-4 h-4" />
               </a>
@@ -58,9 +36,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-white font-semibold mb-3 md:mb-6">Services</h3>
-            <ul className="space-y-3">
+          <div className="min-w-0">
+            <h3 className="mb-3 text-sm font-semibold text-white md:mb-4 md:text-base">Services</h3>
+            <ul className="space-y-2 md:space-y-2.5">
               {[
                 { name: 'Website Development', path: '/services/website-development' },
                 { name: 'Mobile App Development', path: '/services/mobile-app-development' },
@@ -71,7 +49,7 @@ export default function Footer() {
                 { name: 'Maintenance & Support', path: '/services/maintenance-support' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.path} className="text-xs md:text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
+                  <Link href={link.path} className="flex items-start gap-2 text-[11px] leading-4 text-slate-400 transition-colors hover:text-primary-400 md:text-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
                     {link.name}
                   </Link>
@@ -81,34 +59,34 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-          <div>
-            <h3 className="text-white font-semibold mb-3 md:mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+          <div className="min-w-0">
+            <h3 className="mb-3 text-sm font-semibold text-white md:mb-4 md:text-base">Contact Us</h3>
+            <ul className="space-y-3 md:space-y-3.5">
+              <li className="flex items-start gap-2 md:gap-3">
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary-500 md:h-5 md:w-5" />
                 <div>
-                  <a href="tel:+918280482686" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">+91 8280482686</a>
+                  <a href="tel:+918280482686" className="block text-[11px] leading-4 text-slate-400 transition-colors hover:text-white md:text-sm">+91 8280482686</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 md:gap-3">
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary-500 md:h-5 md:w-5" />
                 <div>
-                  <a href="mailto:inboxtobibek@gmail.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block mb-1">inboxtobibek@gmail.com</a>
-                  <a href="mailto:support@bkpdevelopers.com" className="text-xs md:text-sm text-slate-400 hover:text-white transition-colors block">support@bkpdevelopers.com</a>
+                  <a href="mailto:inboxtobibek@gmail.com" className="mb-1 block break-all text-[11px] leading-4 text-slate-400 transition-colors hover:text-white md:text-sm">inboxtobibek@gmail.com</a>
+                  <a href="mailto:support@bkpdevelopers.com" className="block break-all text-[11px] leading-4 text-slate-400 transition-colors hover:text-white md:text-sm">support@bkpdevelopers.com</a>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 md:gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-500 md:h-5 md:w-5" />
                 <div>
-                  <p className="text-xs md:text-sm text-slate-400 mb-1">Mayurbhanj, Odisha, India</p>
-                  <p className="text-xs md:text-sm text-slate-400">Jamshedpur, Jharkhand, India</p>
+                  <p className="mb-1 text-[11px] leading-4 text-slate-400 md:text-sm">Mayurbhanj, Odisha, India</p>
+                  <p className="text-[11px] leading-4 text-slate-400 md:text-sm">Jamshedpur, Jharkhand, India</p>
                 </div>
               </li>
-              <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary-500 shrink-0 mt-0.5" />
+              <li className="flex items-start gap-2 md:gap-3">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary-500 md:h-5 md:w-5" />
                 <div>
-                  <p className="text-xs md:text-sm text-slate-400 mb-1">Mon – Sat: 10:00 AM – 7:00 PM</p>
-                  <p className="text-xs md:text-sm text-slate-400">Sunday Closed</p>
+                  <p className="mb-1 text-[11px] leading-4 text-slate-400 md:text-sm">Mon – Sat: 10:00 AM – 7:00 PM</p>
+                  <p className="text-[11px] leading-4 text-slate-400 md:text-sm">Sunday Closed</p>
                 </div>
               </li>
             </ul>
@@ -131,16 +109,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full flex items-center justify-center shadow-lg shadow-primary-600/30 transition-all duration-300 z-50 ${
-          showScroll ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
     </footer>
   );
 }
