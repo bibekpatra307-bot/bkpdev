@@ -65,11 +65,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-6 md:py-24 bg-white relative">
+    <section className="relative overflow-hidden bg-white py-6 md:py-16">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-16 px-2">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10 px-2">
           <p className="text-[11px] md:text-xs font-bold text-primary-600 tracking-wider uppercase mb-2">Our Services</p>
           <h2 className="text-xl md:text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-2 md:mb-4">
             Complete Digital Solutions
@@ -79,42 +79,40 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Link href={service.path} className="block group">
-                <div className="h-full bg-white border border-slate-200 rounded-2xl p-3 md:p-8 hover:shadow-xl hover:border-primary-100 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
-                  
-                  {/* Hover Background Effect */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                  <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl ${service.bgColor} ${service.color} flex items-center justify-center mb-3 md:mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
+        <div className="relative -mx-2 overflow-hidden py-2">
+          <div className="animate-infinite-scroll flex w-max flex-nowrap gap-3 pr-3 motion-reduce:animate-none">
+            {[...services, ...services].map((service, index) => (
+              <motion.div
+                key={`${service.title}-${index}`}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (index % services.length) * 0.05 }}
+                className="w-[260px] flex-none sm:w-[290px] md:w-[320px] lg:w-[340px]"
+              >
+                <Link href={service.path} className="block h-full group">
+                  <div className="relative flex h-full min-h-[168px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-100 hover:shadow-xl md:min-h-[180px] md:p-5">
+                    <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-gradient-to-br from-primary-50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <div className="flex items-center gap-3">
+                      <div className={`relative z-10 flex h-10 w-10 flex-none items-center justify-center rounded-xl ${service.bgColor} ${service.color} transition-transform duration-300 group-hover:scale-110 md:h-12 md:w-12`}>
+                        {service.icon}
+                      </div>
+                      <h3 className="relative z-10 text-base font-bold text-slate-900 transition-colors group-hover:text-primary-600 md:text-lg">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <p className="relative z-10 mb-3 mt-3 line-clamp-2 text-sm leading-relaxed text-slate-600">
+                      {service.description}
+                    </p>
+                    <div className="relative z-10 mt-auto flex items-center text-xs font-medium text-primary-600">
+                      Learn more
+                      <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
-                  
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-3 relative z-10 group-hover:text-primary-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-slate-600 mb-3 md:mb-6 relative z-10">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex items-center text-primary-600 font-medium text-xs md:text-sm relative z-10">
-                    Learn more
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
       </div>

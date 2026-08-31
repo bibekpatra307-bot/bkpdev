@@ -161,13 +161,13 @@ export default function HeroSearch() {
   };
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-2xl mx-auto z-50">
+    <div ref={containerRef} className="relative z-50 mx-auto w-full max-w-xl px-1">
       <motion.div 
         layout
-        className={`relative flex items-center bg-slate-900/60 backdrop-blur-2xl border transition-all duration-300 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.4)] ${isFocused ? 'border-blue-500/50 ring-4 ring-blue-500/10' : 'border-slate-800'}`}
+        className={`relative flex items-center rounded-xl border bg-slate-900/60 shadow-[0_8px_30px_rgb(0,0,0,0.4)] backdrop-blur-2xl transition-all duration-300 ${isFocused ? 'border-blue-500/50 ring-4 ring-blue-500/10' : 'border-slate-800'}`}
       >
-        <div className={`flex items-center justify-center pl-6 transition-colors duration-300 ${isFocused ? 'text-blue-400' : 'text-slate-500'}`}>
-          <Search className="w-5 h-5" />
+        <div className={`flex items-center justify-center pl-4 transition-colors duration-300 ${isFocused ? 'text-blue-400' : 'text-slate-500'}`}>
+          <Search className="h-4 w-4" />
         </div>
         
         <input
@@ -178,16 +178,16 @@ export default function HeroSearch() {
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
           placeholder="Search for AI, Cloud, Web, Mobile..."
-          className="flex-1 bg-transparent border-none outline-none text-slate-100 placeholder:text-slate-500 text-lg w-full px-4 py-5"
+          className="w-full flex-1 border-none bg-transparent px-3 py-3 text-base text-slate-100 outline-none placeholder:text-slate-500 sm:px-4 sm:py-3.5"
           aria-label="Search services"
           spellCheck="false"
         />
         
-        <div className="hidden sm:flex items-center gap-1 pr-6">
-          <div className="flex items-center justify-center w-6 h-6 rounded bg-slate-800/80 border border-slate-700 text-slate-400">
-            <Command className="w-3 h-3" />
+        <div className="hidden items-center gap-1 pr-4 sm:flex">
+          <div className="flex h-5 w-5 items-center justify-center rounded border border-slate-700 bg-slate-800/80 text-slate-400">
+            <Command className="h-3 w-3" />
           </div>
-          <div className="flex items-center justify-center w-6 h-6 rounded bg-slate-800/80 border border-slate-700 text-slate-400 text-xs font-medium font-sans">
+          <div className="flex h-5 w-5 items-center justify-center rounded border border-slate-700 bg-slate-800/80 font-sans text-[11px] font-medium text-slate-400">
             K
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function HeroSearch() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.98 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute top-full left-0 right-0 mt-3 bg-slate-900/90 backdrop-blur-2xl border border-slate-800 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col max-h-[400px]"
+            className="absolute left-0 right-0 top-full z-[60] mt-2 flex max-h-[min(22rem,calc(100vh-10rem))] flex-col overflow-hidden rounded-xl border border-slate-800 bg-slate-900/95 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-2xl"
           >
             {debouncedQuery.length > 0 ? (
               <div className="flex flex-col py-2 overflow-y-auto">

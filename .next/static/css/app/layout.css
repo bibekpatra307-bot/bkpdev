@@ -96,7 +96,6 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
@@ -277,6 +276,9 @@
   }
 }
 @layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
   .pointer-events-none {
     pointer-events: none;
   }
@@ -427,8 +429,14 @@
   .z-\[-1\] {
     z-index: -1;
   }
+  .z-\[60\] {
+    z-index: 60;
+  }
   .z-\[100\] {
     z-index: 100;
+  }
+  .-mx-2 {
+    margin-inline: calc(var(--spacing) * -2);
   }
   .mx-6 {
     margin-inline: calc(var(--spacing) * 6);
@@ -450,9 +458,6 @@
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
-  }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
@@ -484,11 +489,11 @@
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
+  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
@@ -649,8 +654,8 @@
   .max-h-\[80vh\] {
     max-height: 80vh;
   }
-  .max-h-\[400px\] {
-    max-height: 400px;
+  .max-h-\[min\(22rem\,calc\(100vh-10rem\)\)\] {
+    max-height: min(22rem, calc(100vh - 10rem));
   }
   .min-h-0 {
     min-height: calc(var(--spacing) * 0);
@@ -660,6 +665,9 @@
   }
   .min-h-\[90vh\] {
     min-height: 90vh;
+  }
+  .min-h-\[168px\] {
+    min-height: 168px;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -739,6 +747,9 @@
   .w-\[92vw\] {
     width: 92vw;
   }
+  .w-\[260px\] {
+    width: 260px;
+  }
   .w-\[500px\] {
     width: 500px;
   }
@@ -791,6 +802,9 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-none {
+    flex: none;
+  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
@@ -839,6 +853,9 @@
   .scale-\[1\.02\] {
     scale: 1.02;
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
@@ -847,9 +864,6 @@
   }
   .animate-bounce {
     animation: var(--animate-bounce);
-  }
-  .animate-ping {
-    animation: var(--animate-ping);
   }
   .animate-pulse {
     animation: var(--animate-pulse);
@@ -883,6 +897,9 @@
   }
   .flex-row-reverse {
     flex-direction: row-reverse;
+  }
+  .flex-nowrap {
+    flex-wrap: nowrap;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -919,9 +936,6 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
-  }
-  .gap-2\.5 {
-    gap: calc(var(--spacing) * 2.5);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -1134,12 +1148,6 @@
   }
   .border-slate-800 {
     border-color: var(--color-slate-800);
-  }
-  .border-slate-800\/80 {
-    border-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-slate-800) 80%, transparent);
-    }
   }
   .border-slate-900 {
     border-color: var(--color-slate-900);
@@ -1372,10 +1380,10 @@
       background-color: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
     }
   }
-  .bg-slate-900\/90 {
-    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 90%, transparent);
+  .bg-slate-900\/95 {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 95%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-slate-900) 90%, transparent);
+      background-color: color-mix(in oklab, var(--color-slate-900) 95%, transparent);
     }
   }
   .bg-slate-950 {
@@ -1647,9 +1655,6 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
-  .py-5 {
-    padding-block: calc(var(--spacing) * 5);
-  }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
@@ -1695,11 +1700,11 @@
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
-  }
-  .pr-6 {
-    padding-right: calc(var(--spacing) * 6);
   }
   .pr-12 {
     padding-right: calc(var(--spacing) * 12);
@@ -1727,9 +1732,6 @@
   }
   .pl-4 {
     padding-left: calc(var(--spacing) * 4);
-  }
-  .pl-6 {
-    padding-left: calc(var(--spacing) * 6);
   }
   .text-center {
     text-align: center;
@@ -1791,6 +1793,10 @@
   }
   .text-\[11px\] {
     font-size: 11px;
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
   }
   .leading-\[1\.1\] {
     --tw-leading: 1.1;
@@ -1963,9 +1969,6 @@
   .opacity-70 {
     opacity: 70%;
   }
-  .opacity-75 {
-    opacity: 75%;
-  }
   .opacity-80 {
     opacity: 80%;
   }
@@ -1993,10 +1996,6 @@
   }
   .shadow-\[0_0_20px_rgba\(37\,99\,235\,0\.3\)\] {
     --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(37,99,235,0.3));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[0_0_20px_rgba\(59\,130\,246\,0\.1\)\] {
-    --tw-shadow: 0 0 20px var(--tw-shadow-color, rgba(59,130,246,0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-\[0_0_28px_rgba\(59\,130\,246\,0\.12\)\] {
@@ -2474,6 +2473,13 @@
       }
     }
   }
+  .hover\:bg-white {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-white);
+      }
+    }
+  }
   .hover\:bg-white\/5 {
     &:hover {
       @media (hover: hover) {
@@ -2596,6 +2602,11 @@
       }
     }
   }
+  .motion-reduce\:animate-none {
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
   .sm\:right-8 {
     @media (width >= 40rem) {
       right: calc(var(--spacing) * 8);
@@ -2681,6 +2692,11 @@
       width: calc(var(--spacing) * 80);
     }
   }
+  .sm\:w-\[290px\] {
+    @media (width >= 40rem) {
+      width: 290px;
+    }
+  }
   .sm\:w-\[380px\] {
     @media (width >= 40rem) {
       width: 380px;
@@ -2706,9 +2722,19 @@
       align-items: flex-start;
     }
   }
+  .sm\:px-4 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
   .sm\:px-6 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .sm\:py-3\.5 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 3.5);
     }
   }
   .sm\:text-left {
@@ -2734,12 +2760,6 @@
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
-  .sm\:leading-\[1\.1\] {
-    @media (width >= 40rem) {
-      --tw-leading: 1.1;
-      line-height: 1.1;
-    }
-  }
   .md\:mx-10 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 10);
@@ -2748,11 +2768,6 @@
   .md\:mt-10 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 10);
-    }
-  }
-  .md\:mt-12 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 12);
     }
   }
   .md\:mb-4 {
@@ -2835,6 +2850,11 @@
       max-height: calc(var(--spacing) * 72);
     }
   }
+  .md\:min-h-\[180px\] {
+    @media (width >= 48rem) {
+      min-height: 180px;
+    }
+  }
   .md\:min-h-screen {
     @media (width >= 48rem) {
       min-height: 100vh;
@@ -2883,6 +2903,11 @@
   .md\:w-96 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 96);
+    }
+  }
+  .md\:w-\[320px\] {
+    @media (width >= 48rem) {
+      width: 320px;
     }
   }
   .md\:w-auto {
@@ -2970,6 +2995,11 @@
   .md\:p-4 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:p-5 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 5);
     }
   }
   .md\:p-6 {
@@ -3183,10 +3213,10 @@
       line-height: var(--tw-leading, var(--text-xs--line-height));
     }
   }
-  .md\:leading-\[1\.1\] {
+  .md\:leading-8 {
     @media (width >= 48rem) {
-      --tw-leading: 1.1;
-      line-height: 1.1;
+      --tw-leading: calc(var(--spacing) * 8);
+      line-height: calc(var(--spacing) * 8);
     }
   }
   .lg\:grid {
@@ -3202,6 +3232,11 @@
   .lg\:aspect-\[4\/3\] {
     @media (width >= 64rem) {
       aspect-ratio: 4/3;
+    }
+  }
+  .lg\:w-\[340px\] {
+    @media (width >= 64rem) {
+      width: 340px;
     }
   }
   .lg\:grid-cols-2 {
@@ -3282,22 +3317,10 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
-  .lg\:text-7xl {
-    @media (width >= 64rem) {
-      font-size: var(--text-7xl);
-      line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-  }
   .lg\:text-8xl {
     @media (width >= 64rem) {
       font-size: var(--text-8xl);
       line-height: var(--tw-leading, var(--text-8xl--line-height));
-    }
-  }
-  .lg\:leading-\[1\.1\] {
-    @media (width >= 64rem) {
-      --tw-leading: 1.1;
-      line-height: 1.1;
     }
   }
   .xl\:grid-cols-4 {
@@ -3688,12 +3711,6 @@ body {
   inherits: false;
   initial-value: 1;
 }
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
 @keyframes pulse {
   50% {
     opacity: 0.5;
@@ -3783,94 +3800,43 @@ body {
 /*!********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./app/mobile-compact.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************/
-/* Mobile & Tablet compacting overrides
-   Applied only under 1024px (up to tablet). Desktop (lg+) remains unchanged.
-   Use sparing !important only where necessary to override explicit utility classes.
- */
+/* Scale the existing desktop composition on smaller viewports.
+   Desktop widths remain completely unchanged. */
 
-@media (max-width: 1023px) {
-  /* Reduce section vertical spacing globally on small screens */
-  section {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
-  }
+:root {
+  --responsive-scale: 1;
+}
 
-  /* Prevent huge full-screen sections on mobile */
-  .min-h-screen { min-height: auto !important; }
+@media (max-width: 1199px) {
+  :root {
+    --responsive-scale: 0.7;
+  }
+}
 
-  /* Responsive typography compression */
-  h1 {
-    font-size: 1.875rem !important; /* ~30px */
-    line-height: 1.08 !important;
-    margin-bottom: 0.5rem !important;
+@media (max-width: 767px) {
+  :root {
+    --responsive-scale: 0.6;
   }
-  h2 {
-    font-size: 1.25rem !important; /* ~20px */
-    line-height: 1.12 !important;
-  }
-  h3 {
-    font-size: 1.125rem !important; /* ~18px */
-    line-height: 1.15 !important;
-  }
-  p, li, a, span {
-    font-size: 0.95rem !important; /* slightly reduced body */
-    line-height: 1.25 !important;
+}
+
+@media (max-width: 1199px) {
+  html,
+  body {
+    overflow-x: hidden;
   }
 
-  /* Tighten common spacing utilities (best-effort, avoids changing desktop) */
-  .max-w-7xl { padding-left: 1rem !important; padding-right: 1rem !important; }
-  .px-4, .px-6, .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
-
-  /* Reduce large paddings used across many sections */
-  .py-6, .py-8, .py-10, .py-12, .py-16, .py-20, .py-24 {
-    padding-top: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
+  body {
+    zoom: var(--responsive-scale);
   }
+}
 
-  /* Reduce hero visuals and overly tall elements */
-  .h-\[300px\], .h-\[400px\] {
-    height: auto !important;
-    max-height: 40vh !important;
+@media (prefers-reduced-motion: reduce) {
+  .animate-infinite-scroll,
+  .animate-scroll-left,
+  .animate-scroll-right {
+    animation: none !important;
   }
-
-  /* Make images and videos fit and not be taller than viewport */
-  img, video {
-    max-width: 100% !important;
-    height: auto !important;
-    -o-object-fit: cover !important;
-       object-fit: cover !important;
-  }
-
-  /* Compact buttons and CTAs on mobile */
-  a[class*="px-"] {
-    padding-left: 0.6rem !important;
-    padding-right: 0.6rem !important;
-  }
-  button, input[type="button"], input[type="submit"] {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    padding-left: 0.7rem !important;
-    padding-right: 0.7rem !important;
-  }
-
-  /* Compact footer */
-  footer {
-    padding-top: 1rem !important;
-    padding-bottom: 0.75rem !important;
-  }
-
-  /* Reduce size of floating utility buttons (scroll-to-top / chat when possible) */
-  button[aria-label="Scroll to top"] {
-    width: 40px !important;
-    height: 40px !important;
-    bottom: 12px !important;
-    right: 12px !important;
-  }
-
-  /* Prevent accidental horizontal overflow from extremely long elements */
-  * { box-sizing: border-box; }
-  html, body { overflow-x: hidden; }
- }
+}
 
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app\\layout.tsx","import":"Inter","arguments":[{"subsets":["latin"],"variable":"--font-inter","display":"swap"}],"variableName":"inter"} ***!

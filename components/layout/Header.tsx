@@ -34,6 +34,7 @@ export default function Header() {
   const [visibleCount, setVisibleCount] = useState(navLinks.length);
   const [showOverflowButton, setShowOverflowButton] = useState(false);
   const [isOverflowOpen, setIsOverflowOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [showCta, setShowCta] = useState(true);
 
   const headerRef = useRef<HTMLDivElement>(null);
@@ -119,14 +120,16 @@ export default function Header() {
     if (!isOverflowOpen) return;
 
     const handlePointerDown = (event: MouseEvent) => {
-      if (overflowButtonRef.current && !overflowButtonRef.current.contains(event.target as Node)) {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
         setIsOverflowOpen(false);
+        setIsServicesOpen(false);
       }
     };
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setIsOverflowOpen(false);
+        setIsServicesOpen(false);
       }
     };
 
@@ -139,15 +142,81 @@ export default function Header() {
     };
   }, [isOverflowOpen]);
 
+  useEffect(() => {
+    if (!isServicesOpen) return;
+
+    const handlePointerDown = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isServicesOpen]);
+
+  const renderServicesDropdown = (link: (typeof navLinks)[number]) => {
+    if (!link.dropdown) return null;
+
+    return (
+      <div
+        className={`absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 transition-all duration-200 md:pt-6 ${
+          isServicesOpen
+            ? 'pointer-events-auto translate-y-0 opacity-100'
+            : 'pointer-events-none translate-y-2 opacity-0 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100'
+        }`}
+      >
+        <div className="flex w-64 flex-col gap-1 overflow-hidden rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
+          {link.dropdown.map((dropLink) => (
+            <Link
+              key={dropLink.name}
+              href={dropLink.path}
+              onClick={() => setIsServicesOpen(false)}
+              className={`block rounded-lg px-2 py-3 text-xs font-medium transition-colors md:px-4 md:text-sm ${
+                pathname === dropLink.path
+                  ? 'bg-primary-50 text-primary-600'
+                  : 'text-slate-600 hover:bg-slate-50 hover:text-primary-600'
+              }`}
+            >
+              {dropLink.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const renderNavItem = (link: (typeof navLinks)[number], index: number) => {
     const isActive = pathname === link.path || (link.dropdown && pathname.startsWith(link.path));
 
     return (
-      <div key={link.name} className="relative group" ref={(node) => {
-        navItemRefs.current[index] = node;
-      }}>
+      <div
+        key={link.name}
+        className="relative group"
+        onMouseLeave={() => link.dropdown && setIsServicesOpen(false)}
+        ref={(node) => {
+          navItemRefs.current[index] = node;
+        }}
+      >
         <Link
           href={link.path}
+          onClick={(event) => {
+            if (link.dropdown) {
+              event.preventDefault();
+              setIsServicesOpen((prev) => !prev);
+            }
+          }}
           className={`flex items-center gap-1 text-xs md:text-sm font-medium transition-colors whitespace-nowrap ${
             isActive ? 'text-primary-600' : 'text-slate-600 hover:text-primary-600'
           }`}
@@ -163,23 +232,57 @@ export default function Header() {
           />
         )}
 
-        {link.dropdown && (
-          <div className="absolute left-1/2 top-full -translate-x-1/2 pt-3 md:pt-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-            <div className="flex w-64 flex-col gap-1 overflow-hidden rounded-xl border border-slate-100 bg-white p-2 shadow-xl">
-              {link.dropdown.map((dropLink) => (
-                <Link
-                 key={dropLink.name}
-                 href={dropLink.path}
-                 className={`block rounded-lg px-2 py-3 text-xs font-medium transition-colors md:px-4 md:text-sm ${
-                   pathname === dropLink.path
-                     ? 'bg-primary-50 text-primary-600'
-                     : 'text-slate-600 hover:bg-slate-50 hover:text-primary-600'
-                 }`}
-                >
-                 {dropLink.name}
-                </Link>
-              ))}
-            </div>
+        {renderServicesDropdown(link)}
+      </div>
+    );
+  };
+
+  const renderOverflowItem = (link: (typeof navLinks)[number]) => {
+    if (!link.dropdown) {
+      return (
+        <Link
+          key={link.name}
+          href={link.path}
+          onClick={() => setIsOverflowOpen(false)}
+          className={`px-4 py-3 text-sm font-medium transition-colors ${
+            pathname === link.path
+              ? 'bg-primary-50 text-primary-600'
+              : 'text-slate-600 hover:bg-slate-50 hover:text-primary-600'
+          }`}
+        >
+          {link.name}
+        </Link>
+      );
+    }
+
+    return (
+      <div key={link.name} className="group relative">
+        <Link
+          href={link.path}
+          onClick={(event) => {
+            event.preventDefault();
+            setIsServicesOpen((prev) => !prev);
+          }}
+          className="flex items-center justify-between px-4 py-3 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-primary-600"
+        >
+          {link.name}
+          <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+        </Link>
+        {isServicesOpen && (
+          <div className="border-t border-slate-100 bg-slate-50 px-2 py-1">
+            {link.dropdown.map((dropLink) => (
+              <Link
+                key={dropLink.name}
+                href={dropLink.path}
+                onClick={() => {
+                  setIsServicesOpen(false);
+                  setIsOverflowOpen(false);
+                }}
+                className="block rounded-lg px-3 py-2 text-xs font-medium text-slate-600 hover:bg-white hover:text-primary-600"
+              >
+                {dropLink.name}
+              </Link>
+            ))}
           </div>
         )}
       </div>
@@ -244,18 +347,7 @@ export default function Header() {
                      className="absolute right-0 top-full z-50 mt-3 w-56 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl"
                    >
                      <div className="flex flex-col py-2">
-                       {overflowItems.map((link) => (
-                         <Link
-                           key={link.name}
-                           href={link.path}
-                           onClick={() => setIsOverflowOpen(false)}
-                           className={`px-4 py-3 text-sm font-medium transition-colors ${
-                             pathname === link.path ? 'bg-primary-50 text-primary-600' : 'text-slate-600 hover:bg-slate-50 hover:text-primary-600'
-                           }`}
-                         >
-                           {link.name}
-                         </Link>
-                       ))}
+                       {overflowItems.map(renderOverflowItem)}
                      </div>
                    </motion.div>
                  )}

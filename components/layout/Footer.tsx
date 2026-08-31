@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0a0f1c] text-slate-300 pt-6 md:pt-20 pb-4 md:pb-10 border-t border-slate-800 relative">
       <div className="max-w-7xl mx-auto px-2 md:px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 lg:gap-8 mb-8 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 lg:gap-8 mb-8 md:mb-16">
           
           {/* Company Info */}
           <div className="space-y-6">
@@ -55,30 +55,6 @@ export default function Footer() {
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-3 md:mb-6">Quick Links</h3>
-            <ul className="space-y-3">
-              {[
-                { name: 'Home', path: '/' },
-                { name: 'About Us', path: '/about' },
-                { name: 'Services', path: '/services' },
-                { name: 'Portfolio', path: '/portfolio' },
-                { name: 'Pricing', path: '/pricing' },
-                { name: 'Blog', path: '/blog' },
-                { name: 'Contact Us', path: '/contact' },
-                { name: 'Career', path: '/career' },
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link href={link.path} className="text-xs md:text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-700"></span>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Services */}
